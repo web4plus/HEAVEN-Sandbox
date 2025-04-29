@@ -1,0 +1,94 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://NEURONS/NSA v1.0.0/NSA.gd" type="Script" id=1]
+
+[node name="NSA" type="GraphNode"]
+pause_mode = 1
+margin_right = 139.0
+margin_bottom = 128.0
+custom_colors/close_color = Color( 0, 0, 0, 1 )
+title = "[NSA]"
+show_close = true
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color( 0.12549, 1, 0, 1 )
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color( 0.866667, 0.027451, 0.788235, 1 )
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color( 1, 1, 1, 1 )
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color( 0.992157, 1, 0, 1 )
+slot/2/left_enabled = false
+slot/2/left_type = 0
+slot/2/left_color = Color( 1, 1, 1, 1 )
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color( 1, 1, 1, 1 )
+slot/3/left_enabled = false
+slot/3/left_type = 0
+slot/3/left_color = Color( 1, 1, 1, 1 )
+slot/3/right_enabled = false
+slot/3/right_type = 0
+slot/3/right_color = Color( 1, 1, 1, 1 )
+slot/4/left_enabled = false
+slot/4/left_type = 0
+slot/4/left_color = Color( 1, 1, 1, 1 )
+slot/4/right_enabled = false
+slot/4/right_type = 0
+slot/4/right_color = Color( 1, 1, 1, 1 )
+slot/5/left_enabled = false
+slot/5/left_type = 0
+slot/5/left_color = Color( 1, 1, 1, 1 )
+slot/5/right_enabled = false
+slot/5/right_type = 0
+slot/5/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 123.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Current_datablock" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 35.0
+margin_right = 123.0
+margin_bottom = 49.0
+text = "[ DATABLCOK ]"
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+margin_left = 16.0
+margin_top = 35.0
+margin_right = 74.0
+margin_bottom = 55.0
+
+[node name="CURRENT" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 50.0
+margin_right = 123.0
+margin_bottom = 70.0
+align = 0
+
+[node name="ACTIVATION_LVL" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 71.0
+margin_right = 123.0
+margin_bottom = 91.0
+
+[node name="datablock_input" type="LineEdit" parent="."]
+margin_left = 16.0
+margin_top = 92.0
+margin_right = 123.0
+margin_bottom = 116.0
+
+[connection signal="close_request" from="." to="." method="_on_INHIBITION_close_request"]
+[connection signal="gui_input" from="." to="." method="_on_GraphNode_gui_input"]
+[connection signal="id_pressed" from="PopupMenu" to="." method="_on_PopupMenu_id_pressed"]
+[connection signal="pressed" from="CURRENT" to="." method="_on_CURRENT_pressed"]
+[connection signal="pressed" from="ACTIVATION_LVL" to="." method="_on_ACTIVATION_LVL_pressed"]
+[connection signal="text_changed" from="datablock_input" to="." method="_on_LineEdit_text_changed"]

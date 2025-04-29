@@ -1,0 +1,209 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://SCRIPTS/BRAIN_WORKPLACE.gd" type="Script" id=1]
+[ext_resource path="res://SCRIPTS/MENU_BRAIN.gd" type="Script" id=2]
+[ext_resource path="res://NEURONS/OUTPUT v1.0.0/OUTPUT.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SCRIPTS/BRAIN_bcp.gd" type="Script" id=4]
+[ext_resource path="res://IMG/Folding_ico.png" type="Texture" id=5]
+[ext_resource path="res://NEURONS/NSA v1.0.0/NSA.tscn" type="PackedScene" id=6]
+[ext_resource path="res://NEURONS/NGMC v1.0.0/NGMC.tscn" type="PackedScene" id=7]
+[ext_resource path="res://NEURONS/CGN+ (experimental)/CGN+.tscn" type="PackedScene" id=8]
+
+[sub_resource type="GradientTexture" id=2]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = SubResource( 2 )
+region_rect = Rect2( 0, 0, 2048, 1 )
+axis_stretch_horizontal = 1
+modulate_color = Color( 1, 1, 1, 0.74902 )
+
+[node name="BRAIN" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="GraphEdit" type="GraphEdit" parent="."]
+pause_mode = 2
+margin_left = -1.0
+margin_top = 3.0
+margin_right = 1127.0
+margin_bottom = 808.0
+rect_pivot_offset = Vector2( 453, 412 )
+custom_styles/bg = SubResource( 1 )
+scroll_offset = Vector2( -400, -500 )
+snap_distance = 19
+script = ExtResource( 1 )
+
+[node name="NGMC3" parent="GraphEdit" instance=ExtResource( 8 )]
+visible = false
+margin_left = 400.0
+margin_top = 500.0
+margin_right = 539.0
+margin_bottom = 663.0
+rect_pivot_offset = Vector2( -1018, -93 )
+mouse_filter = 1
+
+[node name="NGMC4" parent="GraphEdit" instance=ExtResource( 8 )]
+visible = false
+margin_left = 400.0
+margin_top = 500.0
+margin_right = 539.0
+margin_bottom = 663.0
+rect_pivot_offset = Vector2( -1018, -93 )
+mouse_filter = 1
+
+[node name="MOVE" parent="GraphEdit" instance=ExtResource( 3 )]
+visible = false
+margin_left = 400.0
+margin_top = 500.0
+margin_right = 506.0
+margin_bottom = 559.0
+mouse_filter = 1
+title = "move"
+
+[node name="JUMP" parent="GraphEdit" instance=ExtResource( 3 )]
+margin_left = 400.0
+margin_top = 500.0
+margin_right = 506.0
+margin_bottom = 559.0
+mouse_filter = 1
+title = "eat"
+
+[node name="LEFT" parent="GraphEdit" instance=ExtResource( 3 )]
+margin_left = 400.0
+margin_top = 500.0
+margin_right = 506.0
+margin_bottom = 559.0
+mouse_filter = 1
+title = "left"
+
+[node name="RIGHT" parent="GraphEdit" instance=ExtResource( 3 )]
+margin_left = 400.0
+margin_top = 500.0
+margin_right = 506.0
+margin_bottom = 559.0
+mouse_filter = 1
+title = "right"
+
+[node name="NSA2" parent="GraphEdit" instance=ExtResource( 6 )]
+visible = false
+margin_left = 400.0
+margin_top = 500.0
+margin_right = 526.0
+margin_bottom = 643.0
+mouse_filter = 1
+
+[node name="NSA" parent="GraphEdit" instance=ExtResource( 6 )]
+visible = false
+margin_left = 400.0
+margin_top = 500.0
+margin_right = 526.0
+margin_bottom = 643.0
+mouse_filter = 1
+
+[node name="NGMC" parent="GraphEdit" instance=ExtResource( 7 )]
+visible = false
+margin_left = 400.0
+margin_top = 500.0
+margin_right = 539.0
+margin_bottom = 663.0
+mouse_filter = 1
+
+[node name="MOUSE_COORD" type="Label" parent="GraphEdit"]
+margin_left = 253.0
+margin_top = 15.0
+margin_right = 418.0
+margin_bottom = 29.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NSA3" parent="GraphEdit" instance=ExtResource( 6 )]
+visible = false
+margin_left = 400.0
+margin_top = 500.0
+margin_right = 526.0
+margin_bottom = 643.0
+mouse_filter = 1
+
+[node name="NSA4" parent="GraphEdit" instance=ExtResource( 6 )]
+visible = false
+margin_left = 400.0
+margin_top = 500.0
+margin_right = 526.0
+margin_bottom = 643.0
+mouse_filter = 1
+
+[node name="NGMC2" parent="GraphEdit" instance=ExtResource( 7 )]
+visible = false
+margin_left = 400.0
+margin_top = 500.0
+margin_right = 539.0
+margin_bottom = 663.0
+mouse_filter = 1
+
+[node name="MENU_BRAIN" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="btn_save" type="Button" parent="MENU_BRAIN"]
+pause_mode = 2
+margin_left = 1011.0
+margin_top = 16.0
+margin_right = 1067.0
+margin_bottom = 52.0
+text = "Save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_close" type="Button" parent="MENU_BRAIN"]
+pause_mode = 2
+margin_left = 1077.38
+margin_top = 15.7789
+margin_right = 1113.38
+margin_bottom = 51.7789
+text = "[ X ]"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="MENU_BRAIN"]
+margin_left = 877.896
+margin_top = 21.8633
+margin_right = 990.896
+margin_bottom = 51.8633
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BRAIN_POPMENU" type="PopupMenu" parent="."]
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="LEFT_MENU" type="Node2D" parent="."]
+position = Vector2( 0, 220 )
+
+[node name="Background" type="ColorRect" parent="LEFT_MENU"]
+margin_top = -18.0
+margin_right = 60.0
+margin_bottom = 440.0
+color = Color( 0, 0, 0, 0.345098 )
+
+[node name="FoldingIco" type="Sprite" parent="LEFT_MENU/Background"]
+position = Vector2( 29.3997, 31.4042 )
+texture = ExtResource( 5 )
+
+[node name="TextEdit" type="TextEdit" parent="."]
+visible = false
+margin_left = 1.0
+margin_top = 637.0
+margin_right = 871.0
+margin_bottom = 795.0
+text = ".///HEAVEN NEUROCON v1.0.0 | Welcome!
+.///_"
+
+[connection signal="connection_request" from="GraphEdit" to="GraphEdit" method="_on_GraphEdit_connection_request"]
+[connection signal="disconnection_request" from="GraphEdit" to="GraphEdit" method="_on_GraphEdit_disconnection_request"]
+[connection signal="gui_input" from="GraphEdit" to="." method="_on_GraphEdit_gui_input"]
+[connection signal="pressed" from="MENU_BRAIN/btn_save" to="MENU_BRAIN" method="_on_btn_save_pressed"]
+[connection signal="pressed" from="MENU_BRAIN/btn_close" to="MENU_BRAIN" method="_on_btn_close_pressed"]
+[connection signal="pressed" from="MENU_BRAIN/Button" to="MENU_BRAIN" method="_on_Button_pressed"]
+[connection signal="id_pressed" from="BRAIN_POPMENU" to="." method="_on_BRAIN_POPMENU_id_pressed"]

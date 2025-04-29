@@ -1,0 +1,481 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://SCRIPTS/MAIN.gd" type="Script" id=1]
+[ext_resource path="res://SPERCTRUM4.tscn" type="PackedScene" id=2]
+[ext_resource path="res://IMG/PLayer.png" type="Texture" id=3]
+[ext_resource path="res://IMG/WORLD.png" type="Texture" id=5]
+[ext_resource path="res://IMG/NET.png" type="Texture" id=6]
+[ext_resource path="res://SAVING_LOADING.tscn" type="PackedScene" id=7]
+[ext_resource path="res://SCRIPTS/VALUE_CHANGER.gd" type="Script" id=8]
+[ext_resource path="res://NEUROGRAMMA.tscn" type="PackedScene" id=9]
+[ext_resource path="res://IMG/HEAVEN.png" type="Texture" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 84.2451, 84.2451 )
+
+[node name="MAIN" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 15.5683, 52.6095 ],
+"_edit_vertical_guides_": [ 1151.35, 1449.84, 1307.18 ]
+}
+
+[node name="MAIN_BACK" type="ColorRect" parent="."]
+margin_left = -13.0
+margin_right = 2598.0
+margin_bottom = 910.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="START_PAGE_WORLD" type="Node2D" parent="."]
+pause_mode = 2
+
+[node name="New_project_world" type="Button" parent="START_PAGE_WORLD"]
+margin_left = 411.52
+margin_top = 382.238
+margin_right = 529.52
+margin_bottom = 445.238
+text = "New Project"
+
+[node name="Load_world" type="Button" parent="START_PAGE_WORLD"]
+margin_left = 564.35
+margin_top = 379.832
+margin_right = 680.35
+margin_bottom = 442.832
+text = "Load existing"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FileDialog" type="FileDialog" parent="START_PAGE_WORLD/Load_world"]
+visible = true
+margin_left = -1294.35
+margin_top = 100.168
+margin_right = -616.35
+margin_bottom = 525.168
+rect_min_size = Vector2( 150, 52.5 )
+window_title = "Open a File"
+resizable = true
+mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_world" type="Label" parent="START_PAGE_WORLD"]
+margin_left = 510.677
+margin_top = 278.812
+margin_right = 582.677
+margin_bottom = 293.812
+text = "THE WORLD"
+
+[node name="TextureRect" type="TextureRect" parent="START_PAGE_WORLD/Label_world"]
+margin_left = 16.323
+margin_top = 30.188
+margin_right = 62.323
+margin_bottom = 76.188
+texture = ExtResource( 5 )
+
+[node name="START_PAGE_BRAIN" type="Node2D" parent="."]
+pause_mode = 2
+position = Vector2( 1472, 0 )
+
+[node name="New_project_brain" type="Button" parent="START_PAGE_BRAIN"]
+margin_left = 411.52
+margin_top = 382.238
+margin_right = 529.52
+margin_bottom = 445.238
+text = "New Project"
+
+[node name="Load_brain" type="Button" parent="START_PAGE_BRAIN"]
+margin_left = 562.568
+margin_top = 381.614
+margin_right = 678.568
+margin_bottom = 444.614
+text = "Load existing"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FileDialog_brain" type="FileDialog" parent="START_PAGE_BRAIN/Load_brain"]
+margin_left = -205.0
+margin_top = -127.0
+margin_right = 473.0
+margin_bottom = 298.0
+rect_min_size = Vector2( 150, 52.5 )
+window_title = "Open a File"
+resizable = true
+mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_brain" type="Label" parent="START_PAGE_BRAIN"]
+margin_left = 512.265
+margin_top = 278.812
+margin_right = 584.265
+margin_bottom = 293.812
+text = "THE BRAIN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="START_PAGE_BRAIN/Label_brain"]
+margin_left = 10.735
+margin_top = 25.188
+margin_right = 55.735
+margin_bottom = 70.188
+texture = ExtResource( 6 )
+
+[node name="Panel" type="Panel" parent="."]
+pause_mode = 2
+margin_left = 1129.0
+margin_top = 1.0
+margin_right = 1473.0
+margin_bottom = 869.0
+
+[node name="SPERCTRUM" parent="Panel" instance=ExtResource( 2 )]
+position = Vector2( 25.47, 103.99 )
+
+[node name="TabContainer" type="TabContainer" parent="Panel"]
+margin_left = 24.8909
+margin_top = 221.987
+margin_right = 320.891
+margin_bottom = 666.987
+
+[node name="WORLD" type="Tabs" parent="Panel/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="BRIDGES" type="Tabs" parent="Panel/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Bridges_tabcontainer" type="TabContainer" parent="Panel/TabContainer/BRIDGES"]
+margin_left = 5.18921
+margin_top = -0.189209
+margin_right = 293.189
+margin_bottom = 401.811
+
+[node name="SENSORY" type="Tabs" parent="Panel/TabContainer/BRIDGES/Bridges_tabcontainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="WorldTree" type="Tree" parent="Panel/TabContainer/BRIDGES/Bridges_tabcontainer/SENSORY"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.50732
+margin_top = 0.919983
+margin_right = -5.49268
+margin_bottom = -22.08
+
+[node name="SYNC_WORLD" type="Button" parent="Panel/TabContainer/BRIDGES/Bridges_tabcontainer/SENSORY"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 342.0
+margin_right = -6.0
+margin_bottom = -4.0
+text = "SYNCHRONIZE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MOTOR" type="Tabs" parent="Panel/TabContainer/BRIDGES/Bridges_tabcontainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="MotoTree" type="Tree" parent="Panel/TabContainer/BRIDGES/Bridges_tabcontainer/MOTOR"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -8.0
+margin_bottom = -23.0
+
+[node name="Button" type="Button" parent="Panel/TabContainer/BRIDGES/Bridges_tabcontainer/MOTOR"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 342.0
+margin_right = -8.0
+margin_bottom = -4.0
+text = "SYNCHRONIZE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NEURONS" type="Tabs" parent="Panel/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="ID_LineEdit" type="LineEdit" parent="Panel/TabContainer/NEURONS"]
+visible = false
+margin_left = 40.0
+margin_top = 374.0
+margin_right = 283.0
+margin_bottom = 398.0
+editable = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ID_Label" type="Label" parent="Panel/TabContainer/NEURONS"]
+visible = false
+margin_left = 13.0
+margin_top = 380.0
+margin_right = 53.0
+margin_bottom = 394.0
+text = "ID:"
+
+[node name="Tree" type="Tree" parent="Panel/TabContainer/NEURONS"]
+margin_left = 8.0
+margin_top = 7.0
+margin_right = 283.0
+margin_bottom = 400.0
+hide_root = true
+
+[node name="Label" type="RichTextLabel" parent="Panel"]
+margin_left = 23.0
+margin_top = 30.0
+margin_right = 268.0
+margin_bottom = 85.0
+scroll_active = false
+
+[node name="Heaven" type="Sprite" parent="Panel/Label"]
+modulate = Color( 1, 1, 1, 0.788235 )
+position = Vector2( 120, 24 )
+texture = ExtResource( 10 )
+
+[node name="PLAY" type="Button" parent="Panel"]
+pause_mode = 2
+margin_left = 138.307
+margin_top = 818.031
+margin_right = 178.308
+margin_bottom = 858.031
+text = ">"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PAUSE" type="Button" parent="Panel"]
+pause_mode = 2
+margin_left = 186.446
+margin_top = 818.068
+margin_right = 226.446
+margin_bottom = 858.068
+text = "||"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FORWARD" type="Button" parent="Panel"]
+pause_mode = 2
+margin_left = 233.749
+margin_top = 818.031
+margin_right = 273.75
+margin_bottom = 858.031
+text = ">>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BACKWARD" type="Button" parent="Panel"]
+pause_mode = 2
+margin_left = 89.249
+margin_top = 818.031
+margin_right = 129.25
+margin_bottom = 858.031
+text = "<<"
+
+[node name="Button" type="Button" parent="Panel"]
+margin_left = 296.0
+margin_top = 829.0
+margin_right = 319.0
+margin_bottom = 849.0
+text = "F"
+
+[node name="MANAGER" type="Button" parent="Panel"]
+pause_mode = 2
+margin_left = 1.0
+margin_top = 868.0
+margin_right = 343.0
+margin_bottom = 908.0
+text = "PROJECT MANAGER"
+
+[node name="Line2D" type="Line2D" parent="Panel"]
+visible = false
+position = Vector2( 75, 18 )
+points = PoolVector2Array( 16, 16, 16, 40, 104, 56, 184, 40, 184, 16 )
+default_color = Color( 0.356863, 0.356863, 0.356863, 1 )
+
+[node name="кнопки плеера" type="Sprite" parent="Panel"]
+visible = false
+position = Vector2( 176, 720 )
+scale = Vector2( 0.189922, 0.189922 )
+texture = ExtResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="Panel/кнопки плеера"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/кнопки плеера/Area2D"]
+position = Vector2( -275.191, 1.56519 )
+shape = SubResource( 1 )
+
+[node name="Area2D2" type="Area2D" parent="Panel/кнопки плеера"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/кнопки плеера/Area2D2"]
+position = Vector2( 280.705, 4.26709 )
+shape = SubResource( 1 )
+
+[node name="Area2D3" type="Area2D" parent="Panel/кнопки плеера"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/кнопки плеера/Area2D3"]
+position = Vector2( -2.24707, 0.341309 )
+shape = SubResource( 1 )
+
+[node name="Mode_switcher" type="Button" parent="Panel"]
+pause_mode = 2
+margin_left = 1.0
+margin_top = -1.0
+margin_right = 344.0
+margin_bottom = 19.0
+text = "MODE"
+
+[node name="CheckButton" type="CheckButton" parent="Panel"]
+pause_mode = 2
+margin_left = 270.907
+margin_top = 28.3663
+margin_right = 346.907
+margin_bottom = 68.3663
+
+[node name="TEST_button3" type="Button" parent="Panel"]
+margin_left = 27.0
+margin_top = 829.0
+margin_right = 49.0
+margin_bottom = 849.0
+rect_pivot_offset = Vector2( 9, 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TEST_button4" type="Button" parent="Panel"]
+margin_left = 53.0
+margin_top = 829.0
+margin_right = 75.0
+margin_bottom = 849.0
+rect_pivot_offset = Vector2( 9, 14 )
+
+[node name="Current_project_label" type="Label" parent="Panel"]
+margin_left = 45.6432
+margin_top = 87.9958
+margin_right = 313.644
+margin_bottom = 101.996
+text = "---"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Main_console" type="TextEdit" parent="Panel"]
+margin_left = 25.0
+margin_top = 686.0
+margin_right = 322.0
+margin_bottom = 807.0
+readonly = true
+show_line_numbers = true
+virtual_keyboard_enabled = false
+selecting_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SAVING_LOADING" parent="." instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 380.545, 232.261 )
+
+[node name="VALUE_CHANGER" type="Node2D" parent="."]
+position = Vector2( -631, 18 )
+script = ExtResource( 8 )
+
+[node name="Panel" type="Panel" parent="VALUE_CHANGER"]
+margin_right = 267.0
+margin_bottom = 60.0
+
+[node name="ColorRect" type="ColorRect" parent="VALUE_CHANGER/Panel"]
+margin_right = 267.0
+margin_bottom = 20.0
+color = Color( 0.027451, 0.027451, 0.027451, 1 )
+
+[node name="Label" type="Label" parent="VALUE_CHANGER/Panel"]
+margin_left = 5.88626
+margin_top = 3.3634
+margin_right = 111.886
+margin_bottom = 17.3634
+text = "[ Value Changer ]"
+
+[node name="Label2" type="Label" parent="VALUE_CHANGER/Panel"]
+margin_left = 240.0
+margin_top = 3.0
+margin_right = 264.0
+margin_bottom = 17.0
+text = "[ X ]"
+
+[node name="Button" type="Button" parent="VALUE_CHANGER/Panel"]
+margin_left = 201.0
+margin_top = 29.0
+margin_right = 258.0
+margin_bottom = 50.0
+text = "Submit"
+
+[node name="VAL" type="LineEdit" parent="VALUE_CHANGER/Panel"]
+margin_left = 9.0
+margin_top = 26.0
+margin_right = 186.0
+margin_bottom = 50.0
+
+[node name="NEUROGRAMMA" parent="." instance=ExtResource( 9 )]
+margin_left = 0.238998
+margin_top = 786.382
+margin_right = 1129.24
+margin_bottom = 899.382
+
+[connection signal="pressed" from="START_PAGE_WORLD/New_project_world" to="." method="_on_New_project_world_pressed"]
+[connection signal="pressed" from="START_PAGE_WORLD/Load_world" to="." method="_on_Load_world_pressed"]
+[connection signal="file_selected" from="START_PAGE_WORLD/Load_world/FileDialog" to="." method="_on_FileDialog_file_selected"]
+[connection signal="pressed" from="START_PAGE_BRAIN/New_project_brain" to="." method="_on_New_project_brain_pressed"]
+[connection signal="pressed" from="START_PAGE_BRAIN/Load_brain" to="." method="_on_Load_brain_pressed"]
+[connection signal="file_selected" from="START_PAGE_BRAIN/Load_brain/FileDialog_brain" to="." method="_on_FileDialog_brain_file_selected"]
+[connection signal="button_pressed" from="Panel/TabContainer/BRIDGES/Bridges_tabcontainer/SENSORY/WorldTree" to="." method="_on_WorldTree_button_pressed"]
+[connection signal="pressed" from="Panel/TabContainer/BRIDGES/Bridges_tabcontainer/SENSORY/SYNC_WORLD" to="." method="_on_SYNC_WORLD_pressed"]
+[connection signal="button_pressed" from="Panel/TabContainer/BRIDGES/Bridges_tabcontainer/MOTOR/MotoTree" to="." method="_on_MotoTree_button_pressed"]
+[connection signal="button_pressed" from="Panel/TabContainer/NEURONS/Tree" to="." method="_on_Tree_button_pressed"]
+[connection signal="pressed" from="Panel/PLAY" to="." method="_on_PLAY_pressed"]
+[connection signal="pressed" from="Panel/PAUSE" to="." method="_on_PAUSE_pressed"]
+[connection signal="pressed" from="Panel/FORWARD" to="." method="_on_FORWARD_pressed"]
+[connection signal="pressed" from="Panel/BACKWARD" to="." method="_on_BACKWARD_pressed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Panel/MANAGER" to="." method="_on_MANAGER_pressed"]
+[connection signal="input_event" from="Panel/кнопки плеера/Area2D" to="." method="_on_Area2D_input_event"]
+[connection signal="pressed" from="Panel/Mode_switcher" to="." method="_on_Mode_switcher_pressed"]
+[connection signal="pressed" from="Panel/CheckButton" to="." method="_on_CheckButton_pressed"]
+[connection signal="pressed" from="Panel/TEST_button3" to="." method="_on_TEST_button3_pressed"]
+[connection signal="pressed" from="Panel/TEST_button4" to="." method="_on_TEST_button4_pressed"]
+[connection signal="pressed" from="VALUE_CHANGER/Panel/Button" to="VALUE_CHANGER" method="_on_Button_pressed"]

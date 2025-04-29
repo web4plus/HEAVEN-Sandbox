@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://SCRIPTS/ROW.gd" type="Script" id=1]
+
+[node name="ROW" type="HBoxContainer"]
+margin_right = 1129.0
+margin_bottom = 10.0
+script = ExtResource( 1 )
+
+[node name="ROW_data" type="Control" parent="."]
+margin_right = 800.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 800, 12 )
+
+[node name="Background" type="ColorRect" parent="ROW_data"]
+margin_right = 100.0
+margin_bottom = 15.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Node_name_label" type="Label" parent="ROW_data/Background"]
+margin_left = 2.06745
+margin_top = 2.35436
+margin_right = 116.067
+margin_bottom = 16.3544
+rect_scale = Vector2( 0.8, 0.8 )
+text = "Node_name_2145"

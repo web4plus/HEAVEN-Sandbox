@@ -1,0 +1,1246 @@
+[gd_scene load_steps=48 format=2]
+
+[ext_resource path="res://SIMULATION/scripts/CHARACTER_tree.gd" type="Script" id=1]
+[ext_resource path="res://IMG/logo3.png" type="Texture" id=2]
+[ext_resource path="res://SIMULATION/scripts/WORLD.gd" type="Script" id=3]
+[ext_resource path="res://IMG/CHARACTER_eyes.png" type="Texture" id=4]
+[ext_resource path="res://IMG/CHARACTER.png" type="Texture" id=6]
+[ext_resource path="res://SIMULATION/scripts/MENU_WORLD.gd" type="Script" id=7]
+[ext_resource path="res://IMG/FIRBISES.png" type="Texture" id=8]
+[ext_resource path="res://SIMULATION/RED_BUTTON.tscn" type="PackedScene" id=9]
+[ext_resource path="res://SIMULATION/scripts/L_RET3.gd" type="Script" id=10]
+[ext_resource path="res://SIMULATION/EYES_VIEW.tscn" type="PackedScene" id=11]
+[ext_resource path="res://SIMULATION/scripts/L_RET2.gd" type="Script" id=12]
+[ext_resource path="res://SIMULATION/scripts/L_RET1.gd" type="Script" id=13]
+[ext_resource path="res://SIMULATION/scripts/L_RET4.gd" type="Script" id=14]
+[ext_resource path="res://SIMULATION/scripts/L_RET5.gd" type="Script" id=15]
+[ext_resource path="res://SIMULATION/scripts/R_RET1.gd" type="Script" id=16]
+[ext_resource path="res://SIMULATION/scripts/R_RET4.gd" type="Script" id=17]
+[ext_resource path="res://SIMULATION/scripts/R_RET3.gd" type="Script" id=18]
+[ext_resource path="res://SIMULATION/scripts/R_RET2.gd" type="Script" id=19]
+[ext_resource path="res://SIMULATION/scripts/R_RET5.gd" type="Script" id=20]
+[ext_resource path="res://SIMULATION/scripts/MOUNTH.gd" type="Script" id=21]
+[ext_resource path="res://SIMULATION/scripts/LS.gd" type="Script" id=22]
+[ext_resource path="res://SIMULATION/scripts/FIB_L.gd" type="Script" id=23]
+[ext_resource path="res://SIMULATION/scripts/FIB_R.gd" type="Script" id=24]
+[ext_resource path="res://SIMULATION/scripts/LS_big.gd" type="Script" id=25]
+[ext_resource path="res://SIMULATION/scripts/RS_big.gd" type="Script" id=26]
+[ext_resource path="res://SIMULATION/scripts/RS.gd" type="Script" id=27]
+[ext_resource path="res://SIMULATION/scripts/BORDERS.gd" type="Script" id=28]
+[ext_resource path="res://IMG/maze.png" type="Texture" id=30]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 710.263, 123.085 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 97.5, 469.25 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 566, 13.25 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 566.75, 12.75 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 14, 309 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 13, 74 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 14.5, 167.5 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 70, 9.5 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 14.5, 222 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 106, 12 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 81.5, 12 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 148, 11 )
+
+[sub_resource type="PhysicsMaterial" id=3]
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 24.114
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 33.208
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 96.2131
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 1, 5 )
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 3.89836
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 4.79174
+
+[node name="WORLD" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1129.0
+margin_bottom = 783.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="EYES_VIEW" parent="." instance=ExtResource( 11 )]
+position = Vector2( 461.591, 728.761 )
+
+[node name="RED_BUTTON" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1123.87, 493.982 )
+z_index = 1
+
+[node name="BORDERS" type="Node" parent="."]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="BORDERS"]
+visible = false
+collision_layer = 97
+collision_mask = 97
+script = ExtResource( 28 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BORDERS/StaticBody2D2"]
+position = Vector2( 545.14, -123.948 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BORDERS/StaticBody2D2"]
+position = Vector2( 562.27, 906.05 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="BORDERS/StaticBody2D2"]
+position = Vector2( -97, 396 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="BORDERS/StaticBody2D2"]
+position = Vector2( 1225.5, 460.75 )
+shape = SubResource( 2 )
+
+[node name="MAZE" type="Node" parent="."]
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="MAZE"]
+position = Vector2( 0, -884 )
+collision_layer = 97
+collision_mask = 97
+script = ExtResource( 28 )
+
+[node name="Maze" type="Sprite" parent="MAZE/StaticBody2D3"]
+position = Vector2( 566, 393 )
+texture = ExtResource( 30 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="MAZE/StaticBody2D3"]
+position = Vector2( -67, 406 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MAZE/StaticBody2D3"]
+position = Vector2( 565, 13.25 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="MAZE/StaticBody2D3"]
+position = Vector2( 566.25, 773.25 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="MAZE/StaticBody2D3"]
+position = Vector2( 557, 300 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="MAZE/StaticBody2D3"]
+position = Vector2( 373, 255 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="MAZE/StaticBody2D3"]
+position = Vector2( 371, 30 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="MAZE/StaticBody2D3"]
+position = Vector2( 370.5, 613.5 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="MAZE/StaticBody2D3"]
+position = Vector2( 623, 598.5 )
+shape = SubResource( 15 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="MAZE/StaticBody2D3"]
+position = Vector2( 686.5, 389 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="MAZE/StaticBody2D3"]
+position = Vector2( 848, 391 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="MAZE/StaticBody2D3"]
+position = Vector2( 465, 268 )
+shape = SubResource( 17 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="MAZE/StaticBody2D3"]
+position = Vector2( 917, 178 )
+shape = SubResource( 18 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="MAZE/StaticBody2D3"]
+position = Vector2( 985, 602 )
+shape = SubResource( 19 )
+
+[node name="CHARACTER" type="Node2D" parent="."]
+position = Vector2( 376, 199 )
+
+[node name="BODY" type="RigidBody2D" parent="CHARACTER"]
+position = Vector2( 187.934, 182.552 )
+collision_layer = 257
+collision_mask = 257
+mass = 2.06
+physics_material_override = SubResource( 3 )
+gravity_scale = 0.0
+can_sleep = false
+linear_damp = 1.0
+angular_damp = 4.0
+script = ExtResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="CHARACTER/BODY"]
+texture = ExtResource( 4 )
+
+[node name="FIBRISES" type="Sprite" parent="CHARACTER/BODY"]
+position = Vector2( 0, -8 )
+texture = ExtResource( 8 )
+
+[node name="FIBRISES2" type="Sprite" parent="CHARACTER/BODY"]
+position = Vector2( 0, -5 )
+texture = ExtResource( 8 )
+
+[node name="Body_sprite" type="Sprite" parent="CHARACTER/BODY"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHARACTER/BODY"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="RS" type="Area2D" parent="CHARACTER/BODY"]
+visible = false
+position = Vector2( -8, 4 )
+collision_layer = 2
+collision_mask = 2
+space_override = 1
+gravity = 0.0
+script = ExtResource( 27 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHARACTER/BODY/RS"]
+position = Vector2( 28.6019, -37.8834 )
+shape = SubResource( 5 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/RS"]
+wait_time = 0.13
+
+[node name="LS" type="Area2D" parent="CHARACTER/BODY"]
+visible = false
+position = Vector2( -11.6431, 3.71936 )
+collision_layer = 2
+collision_mask = 2
+space_override = 1
+gravity = 0.0
+script = ExtResource( 22 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHARACTER/BODY/LS"]
+position = Vector2( -8.3975, -37.7243 )
+shape = SubResource( 5 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/LS"]
+wait_time = 0.13
+
+[node name="LS_big" type="Area2D" parent="CHARACTER/BODY"]
+visible = false
+collision_layer = 6
+collision_mask = 6
+script = ExtResource( 25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHARACTER/BODY/LS_big"]
+position = Vector2( -26.3657, -56.9465 )
+shape = SubResource( 7 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/LS_big"]
+wait_time = 0.13
+
+[node name="RS_big" type="Area2D" parent="CHARACTER/BODY"]
+visible = false
+collision_layer = 6
+collision_mask = 6
+script = ExtResource( 26 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHARACTER/BODY/RS_big"]
+position = Vector2( 28.2878, -54.4951 )
+shape = SubResource( 7 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/RS_big"]
+wait_time = 0.13
+
+[node name="FIB_L" type="Area2D" parent="CHARACTER/BODY"]
+visible = false
+position = Vector2( -34.066, 11.552 )
+collision_layer = 40
+collision_mask = 40
+space_override = 1
+gravity = 0.0
+script = ExtResource( 23 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHARACTER/BODY/FIB_L"]
+position = Vector2( 29, -38 )
+shape = SubResource( 9 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/FIB_L"]
+wait_time = 0.13
+
+[node name="FIB_R" type="Area2D" parent="CHARACTER/BODY"]
+visible = false
+position = Vector2( -23.066, 11.552 )
+collision_layer = 40
+collision_mask = 40
+space_override = 1
+gravity = 0.0
+script = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHARACTER/BODY/FIB_R"]
+position = Vector2( 28.6019, -37.8834 )
+shape = SubResource( 9 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/FIB_R"]
+wait_time = 0.13
+
+[node name="MOUNTH" type="Area2D" parent="CHARACTER/BODY"]
+visible = false
+position = Vector2( -10.3828, -1.96429 )
+collision_layer = 12
+collision_mask = 12
+space_override = 1
+gravity = 0.0
+script = ExtResource( 21 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHARACTER/BODY/MOUNTH"]
+position = Vector2( 10.5639, -24.5915 )
+shape = SubResource( 6 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/MOUNTH"]
+wait_time = 0.13
+
+[node name="RETINA" type="Node2D" parent="CHARACTER/BODY"]
+visible = false
+position = Vector2( -748.066, -508.448 )
+
+[node name="R_RETINA" type="Node2D" parent="CHARACTER/BODY/RETINA"]
+position = Vector2( 1496.36, 0.053009 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+
+[node name="R_RET1" type="Area2D" parent="CHARACTER/BODY/RETINA/R_RETINA"]
+collision_layer = 80
+collision_mask = 80
+script = ExtResource( 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET1"]
+position = Vector2( 688.122, 405.32 )
+scale = Vector2( 1.76, 2.84 )
+polygon = PoolVector2Array( 28.3968, 28.5831, 31.4828, 27.0663, 36.3778, 24.3625, 40.2087, 21.3949, 43.614, 16.2511, 44.9973, 10.8434, 43.6141, 5.63368 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET1"]
+wait_time = 0.13
+autostart = true
+
+[node name="Ray1" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET1"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = -2.33422
+enabled = true
+cast_to = Vector2( 0, 25 )
+collision_mask = 17
+
+[node name="Ray2" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET1"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = -2.48464
+enabled = true
+cast_to = Vector2( 0, 43 )
+collision_mask = 17
+
+[node name="Ray3" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET1"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = -2.59152
+enabled = true
+cast_to = Vector2( 0, 57 )
+collision_mask = 17
+
+[node name="Ray4" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET1"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = -2.68071
+enabled = true
+cast_to = Vector2( 0, 64 )
+collision_mask = 17
+
+[node name="Ray5" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET1"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = -2.75793
+enabled = true
+cast_to = Vector2( 0, 71 )
+collision_mask = 17
+
+[node name="R_RET2" type="Area2D" parent="CHARACTER/BODY/RETINA/R_RETINA"]
+collision_layer = 80
+collision_mask = 80
+script = ExtResource( 19 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET2"]
+position = Vector2( 688.122, 405.32 )
+scale = Vector2( 1.76, 2.84 )
+polygon = PoolVector2Array( 28.3968, 28.5831, 20.5223, -8.61076, 28.8227, -6.43452, 35.6331, -3.00531, 40.5282, 0.885544, 43.6141, 5.63368 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET2"]
+wait_time = 0.13
+autostart = true
+
+[node name="Ray1" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET2"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.52635
+enabled = true
+cast_to = Vector2( 0, 71 )
+collision_mask = 17
+
+[node name="Ray2" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET2"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.43612
+enabled = true
+cast_to = Vector2( 0, 77 )
+collision_mask = 17
+
+[node name="Ray3" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET2"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.35561
+enabled = true
+cast_to = Vector2( 0, 85 )
+collision_mask = 17
+
+[node name="Ray4" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET2"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.2806
+enabled = true
+cast_to = Vector2( 0, 91 )
+collision_mask = 17
+
+[node name="Ray5" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET2"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.20102
+enabled = true
+cast_to = Vector2( 0, 97 )
+collision_mask = 17
+
+[node name="Ray6" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET2"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.12778
+enabled = true
+cast_to = Vector2( 0, 101 )
+collision_mask = 17
+
+[node name="Ray7" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET2"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.06613
+enabled = true
+cast_to = Vector2( 0, 103 )
+collision_mask = 17
+
+[node name="Ray8" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET2"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.00984
+enabled = true
+cast_to = Vector2( 0, 107 )
+collision_mask = 17
+
+[node name="R_RET3" type="Area2D" parent="CHARACTER/BODY/RETINA/R_RETINA"]
+collision_layer = 80
+collision_mask = 80
+script = ExtResource( 18 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET3"]
+position = Vector2( 688.122, 405.32 )
+scale = Vector2( 1.76, 2.84 )
+polygon = PoolVector2Array( 28.3968, 28.5831, 20.5223, -8.61076, 11.8894, -9.26231, 3.45392, -8.61726, -3.87427, -6.94043, -11.2588, -3.34224 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET3"]
+wait_time = 0.13
+autostart = true
+
+[node name="Ray1" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.00546
+enabled = true
+cast_to = Vector2( 0, 107 )
+collision_mask = 17
+
+[node name="Ray2" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 2.9531
+enabled = true
+cast_to = Vector2( 0, 109 )
+collision_mask = 17
+
+[node name="Ray3" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 2.89201
+enabled = true
+cast_to = Vector2( 0, 111 )
+collision_mask = 17
+
+[node name="Ray4" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 2.82743
+enabled = true
+cast_to = Vector2( 0, 113 )
+collision_mask = 17
+
+[node name="Ray5" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 2.76111
+enabled = true
+cast_to = Vector2( 0, 115.007 )
+collision_mask = 17
+
+[node name="Ray6" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 2.6913
+enabled = true
+cast_to = Vector2( 0, 115.007 )
+collision_mask = 17
+
+[node name="Ray7" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 2.61276
+enabled = true
+cast_to = Vector2( 0, 116 )
+collision_mask = 17
+
+[node name="Ray8" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 2.54818
+enabled = true
+cast_to = Vector2( 0, 116 )
+collision_mask = 17
+
+[node name="Ray9" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 2.48186
+enabled = true
+cast_to = Vector2( 0, 115 )
+collision_mask = 17
+
+[node name="R_RET4" type="Area2D" parent="CHARACTER/BODY/RETINA/R_RETINA"]
+collision_layer = 80
+collision_mask = 80
+script = ExtResource( 17 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET4"]
+position = Vector2( 688.122, 405.32 )
+scale = Vector2( 1.76, 2.84 )
+polygon = PoolVector2Array( 28.3968, 28.5831, -19.3874, 16.4367, -20.9499, 10.8909, -19.2453, 5.4332, -16.1203, 0.32756, -11.2588, -3.34224 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET4"]
+wait_time = 0.13
+autostart = true
+
+[node name="Ray1" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET4"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 2.48186
+enabled = true
+cast_to = Vector2( 0, 114 )
+collision_mask = 17
+
+[node name="Ray2" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET4"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 2.4295
+enabled = true
+cast_to = Vector2( 0, 113 )
+collision_mask = 17
+
+[node name="Ray3" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET4"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 2.35969
+enabled = true
+cast_to = Vector2( 0, 112 )
+collision_mask = 17
+
+[node name="Ray4" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET4"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 2.27242
+enabled = true
+cast_to = Vector2( 0, 108 )
+collision_mask = 17
+
+[node name="Ray5" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET4"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 2.1677
+enabled = true
+cast_to = Vector2( 0, 104 )
+collision_mask = 17
+
+[node name="Ray6" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET4"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 2.06298
+enabled = true
+cast_to = Vector2( 0, 98 )
+collision_mask = 17
+
+[node name="Ray7" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET4"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 1.9635
+enabled = true
+cast_to = Vector2( 0, 92 )
+collision_mask = 17
+
+[node name="R_RET5" type="Area2D" parent="CHARACTER/BODY/RETINA/R_RETINA"]
+collision_layer = 80
+collision_mask = 80
+script = ExtResource( 20 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET5"]
+position = Vector2( 688.122, 405.32 )
+scale = Vector2( 1.76, 2.84 )
+polygon = PoolVector2Array( 28.3968, 28.5831, -19.3874, 16.4367, -16.4755, 21.1902, -11.0777, 25.5036, -4.54364, 28.5406, 3.48193, 30.6973, 11.6495, 31.2254, 20.4564, 30.6093 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET5"]
+wait_time = 0.13
+autostart = true
+
+[node name="Ray1" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET5"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 1.96175
+enabled = true
+cast_to = Vector2( 0, 91 )
+collision_mask = 17
+
+[node name="Ray2" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET5"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 1.83958
+enabled = true
+cast_to = Vector2( 0, 84 )
+collision_mask = 17
+
+[node name="Ray3" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET5"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 1.7174
+enabled = true
+cast_to = Vector2( 0, 72 )
+collision_mask = 17
+
+[node name="Ray4" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET5"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 1.56032
+enabled = true
+cast_to = Vector2( 0, 56 )
+collision_mask = 17
+
+[node name="Ray5" type="RayCast2D" parent="CHARACTER/BODY/RETINA/R_RETINA/R_RET5"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 1.31598
+enabled = true
+cast_to = Vector2( 0, 33 )
+collision_mask = 17
+
+[node name="L_RETINA" type="Node2D" parent="CHARACTER/BODY/RETINA"]
+
+[node name="L_RET1" type="Area2D" parent="CHARACTER/BODY/RETINA/L_RETINA"]
+collision_layer = 80
+collision_mask = 80
+script = ExtResource( 13 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET1"]
+position = Vector2( 688.122, 405.32 )
+scale = Vector2( 1.76, 2.84 )
+polygon = PoolVector2Array( 28.3968, 28.5831, 31.4828, 27.0663, 36.3778, 24.3625, 40.2087, 21.3949, 43.614, 16.2511, 44.9973, 10.8434, 43.6141, 5.63368 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET1"]
+wait_time = 0.13
+autostart = true
+
+[node name="Ray1" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET1"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = -2.33422
+enabled = true
+cast_to = Vector2( 0, 25 )
+collision_mask = 17
+
+[node name="Ray2" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET1"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = -2.48464
+enabled = true
+cast_to = Vector2( 0, 43 )
+collision_mask = 17
+
+[node name="Ray3" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET1"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = -2.59152
+enabled = true
+cast_to = Vector2( 0, 57 )
+collision_mask = 17
+
+[node name="Ray4" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET1"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = -2.68071
+enabled = true
+cast_to = Vector2( 0, 64 )
+collision_mask = 17
+
+[node name="Ray5" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET1"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = -2.75793
+enabled = true
+cast_to = Vector2( 0, 71 )
+collision_mask = 17
+
+[node name="L_RET2" type="Area2D" parent="CHARACTER/BODY/RETINA/L_RETINA"]
+collision_layer = 80
+collision_mask = 80
+script = ExtResource( 12 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET2"]
+position = Vector2( 688.122, 405.32 )
+scale = Vector2( 1.76, 2.84 )
+polygon = PoolVector2Array( 28.3968, 28.5831, 20.5223, -8.61076, 28.8227, -6.43452, 35.6331, -3.00531, 40.5282, 0.885544, 43.6141, 5.63368 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET2"]
+wait_time = 0.13
+autostart = true
+
+[node name="Ray1" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET2"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.52635
+enabled = true
+cast_to = Vector2( 0, 71 )
+collision_mask = 17
+
+[node name="Ray2" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET2"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.43612
+enabled = true
+cast_to = Vector2( 0, 77 )
+collision_mask = 17
+
+[node name="Ray3" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET2"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.35561
+enabled = true
+cast_to = Vector2( 0, 85 )
+collision_mask = 17
+
+[node name="Ray4" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET2"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.2806
+enabled = true
+cast_to = Vector2( 0, 91 )
+collision_mask = 17
+
+[node name="Ray5" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET2"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.20102
+enabled = true
+cast_to = Vector2( 0, 97 )
+collision_mask = 17
+
+[node name="Ray6" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET2"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.12778
+enabled = true
+cast_to = Vector2( 0, 101 )
+collision_mask = 17
+
+[node name="Ray7" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET2"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.06613
+enabled = true
+cast_to = Vector2( 0, 103 )
+collision_mask = 17
+
+[node name="Ray8" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET2"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.00984
+enabled = true
+cast_to = Vector2( 0, 107 )
+collision_mask = 17
+
+[node name="L_RET3" type="Area2D" parent="CHARACTER/BODY/RETINA/L_RETINA"]
+collision_layer = 80
+collision_mask = 80
+script = ExtResource( 10 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET3"]
+position = Vector2( 688.122, 405.32 )
+scale = Vector2( 1.76, 2.84 )
+polygon = PoolVector2Array( 28.3968, 28.5831, 20.5223, -8.61076, 11.8894, -9.26231, 3.45392, -8.61726, -3.87427, -6.94043, -11.2588, -3.34224 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET3"]
+wait_time = 0.13
+autostart = true
+
+[node name="Ray1" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 3.00546
+enabled = true
+cast_to = Vector2( 0, 107 )
+collision_mask = 17
+
+[node name="Ray2" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 2.9531
+enabled = true
+cast_to = Vector2( 0, 109 )
+collision_mask = 17
+
+[node name="Ray3" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 2.89201
+enabled = true
+cast_to = Vector2( 0, 111 )
+collision_mask = 17
+
+[node name="Ray4" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 2.82743
+enabled = true
+cast_to = Vector2( 0, 113 )
+collision_mask = 17
+
+[node name="Ray5" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 2.76111
+enabled = true
+cast_to = Vector2( 0, 115.007 )
+collision_mask = 17
+
+[node name="Ray6" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 2.6913
+enabled = true
+cast_to = Vector2( 0, 115.007 )
+collision_mask = 17
+
+[node name="Ray7" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 2.61276
+enabled = true
+cast_to = Vector2( 0, 116 )
+collision_mask = 17
+
+[node name="Ray8" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 2.54818
+enabled = true
+cast_to = Vector2( 0, 116 )
+collision_mask = 17
+
+[node name="Ray9" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET3"]
+visible = false
+position = Vector2( 738.085, 486.471 )
+rotation = 2.48186
+enabled = true
+cast_to = Vector2( 0, 115 )
+collision_mask = 17
+
+[node name="L_RET4" type="Area2D" parent="CHARACTER/BODY/RETINA/L_RETINA"]
+collision_layer = 80
+collision_mask = 80
+script = ExtResource( 14 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET4"]
+position = Vector2( 688.122, 405.32 )
+scale = Vector2( 1.76, 2.84 )
+polygon = PoolVector2Array( 28.3968, 28.5831, -19.3874, 16.4367, -20.9499, 10.8909, -19.2453, 5.4332, -16.1203, 0.32756, -11.2588, -3.34224 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET4"]
+wait_time = 0.13
+autostart = true
+
+[node name="Ray1" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET4"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 2.48186
+enabled = true
+cast_to = Vector2( 0, 114 )
+collision_mask = 17
+
+[node name="Ray2" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET4"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 2.4295
+enabled = true
+cast_to = Vector2( 0, 113 )
+collision_mask = 17
+
+[node name="Ray3" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET4"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 2.35969
+enabled = true
+cast_to = Vector2( 0, 112 )
+collision_mask = 17
+
+[node name="Ray4" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET4"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 2.27242
+enabled = true
+cast_to = Vector2( 0, 108 )
+collision_mask = 17
+
+[node name="Ray5" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET4"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 2.1677
+enabled = true
+cast_to = Vector2( 0, 104 )
+collision_mask = 17
+
+[node name="Ray6" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET4"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 2.06298
+enabled = true
+cast_to = Vector2( 0, 98 )
+collision_mask = 17
+
+[node name="Ray7" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET4"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 1.9635
+enabled = true
+cast_to = Vector2( 0, 92 )
+collision_mask = 17
+
+[node name="L_RET5" type="Area2D" parent="CHARACTER/BODY/RETINA/L_RETINA"]
+collision_layer = 80
+collision_mask = 80
+script = ExtResource( 15 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET5"]
+position = Vector2( 688.122, 405.32 )
+scale = Vector2( 1.76, 2.84 )
+polygon = PoolVector2Array( 28.3968, 28.5831, -19.3874, 16.4367, -16.4755, 21.1902, -11.0777, 25.5036, -4.54364, 28.5406, 3.48193, 30.6973, 11.6495, 31.2254, 20.4564, 30.6093 )
+
+[node name="Timer" type="Timer" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET5"]
+wait_time = 0.13
+autostart = true
+
+[node name="Ray1" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET5"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 1.96175
+enabled = true
+cast_to = Vector2( 0, 91 )
+collision_mask = 17
+
+[node name="Ray2" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET5"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 1.83958
+enabled = true
+cast_to = Vector2( 0, 84 )
+collision_mask = 17
+
+[node name="Ray3" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET5"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 1.7174
+enabled = true
+cast_to = Vector2( 0, 72 )
+collision_mask = 17
+
+[node name="Ray4" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET5"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 1.56032
+enabled = true
+cast_to = Vector2( 0, 56 )
+collision_mask = 17
+
+[node name="Ray5" type="RayCast2D" parent="CHARACTER/BODY/RETINA/L_RETINA/L_RET5"]
+visible = false
+position = Vector2( 738.074, 486.466 )
+rotation = 1.31598
+enabled = true
+cast_to = Vector2( 0, 33 )
+collision_mask = 17
+
+[node name="SKIN" type="Node2D" parent="CHARACTER/BODY"]
+visible = false
+
+[node name="LEFT_1" type="Area2D" parent="CHARACTER/BODY/SKIN"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHARACTER/BODY/SKIN/LEFT_1"]
+position = Vector2( -19.0869, -14.599 )
+shape = SubResource( 8 )
+
+[node name="LEFT_2" type="Area2D" parent="CHARACTER/BODY/SKIN"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHARACTER/BODY/SKIN/LEFT_2"]
+position = Vector2( -23.9257, -0.0825806 )
+shape = SubResource( 8 )
+
+[node name="LEFT_3" type="Area2D" parent="CHARACTER/BODY/SKIN"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHARACTER/BODY/SKIN/LEFT_3"]
+position = Vector2( -19.0035, 14.7674 )
+shape = SubResource( 8 )
+
+[node name="LEFT_4" type="Area2D" parent="CHARACTER/BODY/SKIN"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHARACTER/BODY/SKIN/LEFT_4"]
+position = Vector2( -7.1568, 23.1102 )
+shape = SubResource( 8 )
+
+[node name="RIGHT_1" type="Area2D" parent="CHARACTER/BODY/SKIN"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHARACTER/BODY/SKIN/RIGHT_1"]
+position = Vector2( 18.8726, -14.599 )
+shape = SubResource( 8 )
+
+[node name="RIGHT_2" type="Area2D" parent="CHARACTER/BODY/SKIN"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHARACTER/BODY/SKIN/RIGHT_2"]
+position = Vector2( 24.045, -0.0825806 )
+shape = SubResource( 8 )
+
+[node name="RIGHT_3" type="Area2D" parent="CHARACTER/BODY/SKIN"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHARACTER/BODY/SKIN/RIGHT_3"]
+position = Vector2( 18.7891, 14.6841 )
+shape = SubResource( 8 )
+
+[node name="RIGHT_4" type="Area2D" parent="CHARACTER/BODY/SKIN"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHARACTER/BODY/SKIN/RIGHT_4"]
+position = Vector2( 6.83344, 22.9868 )
+shape = SubResource( 8 )
+
+[node name="Energy_loss" type="Timer" parent="CHARACTER/BODY"]
+autostart = true
+
+[node name="ENERGY" type="Timer" parent="CHARACTER/BODY"]
+wait_time = 0.154
+autostart = true
+
+[node name="Vestibular_rotate" type="Timer" parent="CHARACTER/BODY"]
+wait_time = 0.15
+autostart = true
+
+[node name="Vestibular_impulse" type="Timer" parent="CHARACTER/BODY"]
+wait_time = 0.15
+autostart = true
+
+[node name="ENER" type="Label" parent="CHARACTER/BODY"]
+visible = false
+margin_left = 27.375
+margin_top = -30.75
+margin_right = 43.375
+margin_bottom = -16.75
+
+[node name="Linear_Strenght" type="Label" parent="CHARACTER/BODY"]
+visible = false
+margin_left = 27.375
+margin_top = -54.75
+margin_right = 43.375
+margin_bottom = -40.75
+
+[node name="Rotation" type="Label" parent="CHARACTER/BODY"]
+visible = false
+margin_left = 27.375
+margin_top = -71.75
+margin_right = 43.375
+margin_bottom = -57.75
+
+[node name="Linear" type="Label" parent="CHARACTER/BODY"]
+visible = false
+margin_left = 27.375
+margin_top = -32.75
+margin_right = 43.375
+margin_bottom = -18.75
+
+[node name="FOOD" type="Node2D" parent="."]
+position = Vector2( 146.834, 67.6287 )
+
+[node name="MENU_WORLD" type="Node2D" parent="."]
+position = Vector2( -67.8056, 853.927 )
+script = ExtResource( 7 )
+
+[node name="btn_save" type="Button" parent="MENU_WORLD"]
+pause_mode = 2
+margin_left = 1088.0
+margin_top = -842.0
+margin_right = 1144.0
+margin_bottom = -806.0
+text = "Save"
+
+[node name="btn_close" type="Button" parent="MENU_WORLD"]
+pause_mode = 2
+margin_left = 1149.38
+margin_top = -842.221
+margin_right = 1185.38
+margin_bottom = -806.221
+text = "[ X ]"
+
+[node name="DEGREE" type="Label" parent="."]
+margin_left = 906.406
+margin_top = 136.516
+margin_right = 983.406
+margin_bottom = 166.516
+
+[node name="Logo3" type="Sprite" parent="DEGREE"]
+visible = false
+position = Vector2( -839.406, 556.297 )
+scale = Vector2( 0.198502, 0.198502 )
+texture = ExtResource( 2 )
+
+[node name="DEGREE2" type="Label" parent="."]
+margin_left = 903.231
+margin_top = 96.8315
+margin_right = 980.231
+margin_bottom = 126.831
+
+[connection signal="body_entered" from="CHARACTER/BODY/RS" to="CHARACTER/BODY/RS" method="_on_RS_body_entered"]
+[connection signal="timeout" from="CHARACTER/BODY/RS/Timer" to="CHARACTER/BODY/RS" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/LS" to="CHARACTER/BODY/LS" method="_on_LS_body_entered"]
+[connection signal="timeout" from="CHARACTER/BODY/LS/Timer" to="CHARACTER/BODY/LS" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/LS_big" to="CHARACTER/BODY/LS_big" method="_on_LS_big_body_entered"]
+[connection signal="timeout" from="CHARACTER/BODY/LS_big/Timer" to="CHARACTER/BODY/LS_big" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/RS_big" to="CHARACTER/BODY/RS_big" method="_on_RS_big_body_entered"]
+[connection signal="timeout" from="CHARACTER/BODY/RS_big/Timer" to="CHARACTER/BODY/RS_big" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/FIB_L" to="CHARACTER/BODY/FIB_L" method="_on_FIB_L_body_entered"]
+[connection signal="timeout" from="CHARACTER/BODY/FIB_L/Timer" to="CHARACTER/BODY/FIB_L" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/FIB_R" to="CHARACTER/BODY/FIB_R" method="_on_FIB_R_body_entered"]
+[connection signal="timeout" from="CHARACTER/BODY/FIB_R/Timer" to="CHARACTER/BODY/FIB_R" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/MOUNTH" to="CHARACTER/BODY/MOUNTH" method="_on_MOUNTH_body_entered"]
+[connection signal="timeout" from="CHARACTER/BODY/MOUNTH/Timer" to="CHARACTER/BODY/MOUNTH" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/RETINA/R_RETINA/R_RET1" to="CHARACTER/BODY/RETINA/R_RETINA/R_RET1" method="_on_R_RET1_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/RETINA/R_RETINA/R_RET1" to="CHARACTER/BODY/RETINA/R_RETINA/R_RET1" method="_on_R_RET1_body_exited"]
+[connection signal="timeout" from="CHARACTER/BODY/RETINA/R_RETINA/R_RET1/Timer" to="CHARACTER/BODY/RETINA/R_RETINA/R_RET1" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/RETINA/R_RETINA/R_RET2" to="CHARACTER/BODY/RETINA/R_RETINA/R_RET2" method="_on_R_RET2_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/RETINA/R_RETINA/R_RET2" to="CHARACTER/BODY/RETINA/R_RETINA/R_RET2" method="_on_R_RET2_body_exited"]
+[connection signal="timeout" from="CHARACTER/BODY/RETINA/R_RETINA/R_RET2/Timer" to="CHARACTER/BODY/RETINA/R_RETINA/R_RET2" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/RETINA/R_RETINA/R_RET3" to="CHARACTER/BODY/RETINA/R_RETINA/R_RET3" method="_on_R_RET3_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/RETINA/R_RETINA/R_RET3" to="CHARACTER/BODY/RETINA/R_RETINA/R_RET3" method="_on_R_RET3_body_exited"]
+[connection signal="timeout" from="CHARACTER/BODY/RETINA/R_RETINA/R_RET3/Timer" to="CHARACTER/BODY/RETINA/R_RETINA/R_RET3" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/RETINA/R_RETINA/R_RET4" to="CHARACTER/BODY/RETINA/R_RETINA/R_RET4" method="_on_R_RET4_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/RETINA/R_RETINA/R_RET4" to="CHARACTER/BODY/RETINA/R_RETINA/R_RET4" method="_on_R_RET4_body_exited"]
+[connection signal="timeout" from="CHARACTER/BODY/RETINA/R_RETINA/R_RET4/Timer" to="CHARACTER/BODY/RETINA/R_RETINA/R_RET4" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/RETINA/R_RETINA/R_RET5" to="CHARACTER/BODY/RETINA/R_RETINA/R_RET5" method="_on_R_RET5_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/RETINA/R_RETINA/R_RET5" to="CHARACTER/BODY/RETINA/R_RETINA/R_RET5" method="_on_R_RET5_body_exited"]
+[connection signal="timeout" from="CHARACTER/BODY/RETINA/R_RETINA/R_RET5/Timer" to="CHARACTER/BODY/RETINA/R_RETINA/R_RET5" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/RETINA/L_RETINA/L_RET1" to="CHARACTER/BODY/RETINA/L_RETINA/L_RET1" method="_on_L_RET1_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/RETINA/L_RETINA/L_RET1" to="CHARACTER/BODY/RETINA/L_RETINA/L_RET1" method="_on_L_RET1_body_exited"]
+[connection signal="timeout" from="CHARACTER/BODY/RETINA/L_RETINA/L_RET1/Timer" to="CHARACTER/BODY/RETINA/L_RETINA/L_RET1" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/RETINA/L_RETINA/L_RET2" to="CHARACTER/BODY/RETINA/L_RETINA/L_RET2" method="_on_L_RET2_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/RETINA/L_RETINA/L_RET2" to="CHARACTER/BODY/RETINA/L_RETINA/L_RET2" method="_on_L_RET2_body_exited"]
+[connection signal="timeout" from="CHARACTER/BODY/RETINA/L_RETINA/L_RET2/Timer" to="CHARACTER/BODY/RETINA/L_RETINA/L_RET2" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/RETINA/L_RETINA/L_RET3" to="CHARACTER/BODY/RETINA/L_RETINA/L_RET3" method="_on_L_RET3_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/RETINA/L_RETINA/L_RET3" to="CHARACTER/BODY/RETINA/L_RETINA/L_RET3" method="_on_L_RET3_body_exited"]
+[connection signal="timeout" from="CHARACTER/BODY/RETINA/L_RETINA/L_RET3/Timer" to="CHARACTER/BODY/RETINA/L_RETINA/L_RET3" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/RETINA/L_RETINA/L_RET4" to="CHARACTER/BODY/RETINA/L_RETINA/L_RET4" method="_on_L_RET4_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/RETINA/L_RETINA/L_RET4" to="CHARACTER/BODY/RETINA/L_RETINA/L_RET4" method="_on_L_RET4_body_exited"]
+[connection signal="timeout" from="CHARACTER/BODY/RETINA/L_RETINA/L_RET4/Timer" to="CHARACTER/BODY/RETINA/L_RETINA/L_RET4" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/RETINA/L_RETINA/L_RET5" to="CHARACTER/BODY/RETINA/L_RETINA/L_RET5" method="_on_L_RET5_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/RETINA/L_RETINA/L_RET5" to="CHARACTER/BODY/RETINA/L_RETINA/L_RET5" method="_on_L_RET5_body_exited"]
+[connection signal="timeout" from="CHARACTER/BODY/RETINA/L_RETINA/L_RET5/Timer" to="CHARACTER/BODY/RETINA/L_RETINA/L_RET5" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="CHARACTER/BODY/SKIN/LEFT_1" to="CHARACTER/BODY" method="_on_LEFT_1_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/SKIN/LEFT_1" to="." method="_on_LEFT_1_body_exited"]
+[connection signal="body_entered" from="CHARACTER/BODY/SKIN/LEFT_2" to="CHARACTER/BODY" method="_on_LEFT_2_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/SKIN/LEFT_2" to="." method="_on_LEFT_2_body_exited"]
+[connection signal="body_entered" from="CHARACTER/BODY/SKIN/LEFT_3" to="CHARACTER/BODY" method="_on_LEFT_3_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/SKIN/LEFT_3" to="." method="_on_LEFT_3_body_exited"]
+[connection signal="body_entered" from="CHARACTER/BODY/SKIN/LEFT_4" to="CHARACTER/BODY" method="_on_LEFT_4_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/SKIN/LEFT_4" to="." method="_on_LEFT_4_body_exited"]
+[connection signal="body_entered" from="CHARACTER/BODY/SKIN/RIGHT_1" to="CHARACTER/BODY" method="_on_RIGHT_1_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/SKIN/RIGHT_1" to="." method="_on_RIGHT_1_body_exited"]
+[connection signal="body_entered" from="CHARACTER/BODY/SKIN/RIGHT_2" to="CHARACTER/BODY" method="_on_RIGHT_2_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/SKIN/RIGHT_2" to="." method="_on_RIGHT_2_body_exited"]
+[connection signal="body_entered" from="CHARACTER/BODY/SKIN/RIGHT_3" to="CHARACTER/BODY" method="_on_RIGHT_3_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/SKIN/RIGHT_3" to="." method="_on_RIGHT_3_body_exited"]
+[connection signal="body_entered" from="CHARACTER/BODY/SKIN/RIGHT_4" to="CHARACTER/BODY" method="_on_RIGHT_4_body_entered"]
+[connection signal="body_exited" from="CHARACTER/BODY/SKIN/RIGHT_4" to="." method="_on_RIGHT_4_body_exited"]
+[connection signal="timeout" from="CHARACTER/BODY/Energy_loss" to="CHARACTER/BODY" method="_on_Energy_loss_timeout"]
+[connection signal="timeout" from="CHARACTER/BODY/ENERGY" to="CHARACTER/BODY" method="_on_ENERGY_timeout"]
+[connection signal="timeout" from="CHARACTER/BODY/Vestibular_rotate" to="CHARACTER/BODY" method="_on_Vestibular_rotate_timeout"]
+[connection signal="timeout" from="CHARACTER/BODY/Vestibular_impulse" to="CHARACTER/BODY" method="_on_Vestibular_impulse_timeout"]
+[connection signal="pressed" from="MENU_WORLD/btn_save" to="MENU_WORLD" method="_on_btn_save_pressed"]
+[connection signal="pressed" from="MENU_WORLD/btn_close" to="MENU_WORLD" method="_on_btn_close_pressed"]

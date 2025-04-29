@@ -1,0 +1,220 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://SCRIPTS/SAVING_LOADING.gd" type="Script" id=1]
+[ext_resource path="res://IMG/WORLD_ico.png" type="Texture" id=2]
+[ext_resource path="res://IMG/INFO.png" type="Texture" id=3]
+[ext_resource path="res://IMG/WORLD.png" type="Texture" id=4]
+[ext_resource path="res://IMG/NET.png" type="Texture" id=5]
+
+[node name="Node2D" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 235.142, 207.332, 230.136, 246.046, 270.088 ],
+"_edit_vertical_guides_": [ 24.8903, 282.258, 68.7875, 153.939, 45.7245 ]
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -759.807
+margin_top = -525.804
+margin_right = 3149.2
+margin_bottom = 707.196
+color = Color( 0, 0, 0, 0.701961 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+visible = false
+margin_left = -6.35681
+margin_top = 3.86327
+margin_right = 616.643
+margin_bottom = 325.863
+color = Color( 0.235294, 0.235294, 0.235294, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 1.0
+margin_top = 28.0
+margin_right = 624.0
+margin_bottom = 333.0
+color = Color( 0.0784314, 0.0705882, 0.121569, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_close" type="Button" parent="."]
+margin_left = 608.557
+margin_top = 18.5758
+margin_right = 628.557
+margin_bottom = 38.5758
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 9.60144
+margin_top = 8.27995
+margin_right = 230.601
+margin_bottom = 26.2799
+text = ".///HEAVEN | Saving & Loading"
+
+[node name="Tree" type="Tree" parent="."]
+margin_left = 302.0
+margin_top = 49.0
+margin_right = 596.0
+margin_bottom = 305.0
+hide_root = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 24.3654
+margin_top = 55.2063
+margin_right = 70.3654
+margin_bottom = 71.2063
+text = "Name:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WORLD_ico" type="Sprite" parent="."]
+visible = false
+position = Vector2( 69.3731, 237.209 )
+scale = Vector2( 0.590187, 0.590187 )
+texture = ExtResource( 2 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 23.7717
+margin_top = 89.2104
+margin_right = 165.772
+margin_bottom = 103.21
+text = "Description (optional):"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name_label" type="TextEdit" parent="."]
+margin_left = 69.0
+margin_top = 50.0
+margin_right = 268.0
+margin_bottom = 74.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Descr_field" type="TextEdit" parent="."]
+margin_left = 25.0
+margin_top = 108.0
+margin_right = 281.0
+margin_bottom = 194.0
+text = "New project"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 25.0
+margin_top = 279.0
+margin_right = 282.0
+margin_bottom = 304.0
+text = "Save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 269.0
+margin_top = 50.0
+margin_right = 282.0
+margin_bottom = 73.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+visible = false
+margin_left = 302.0
+margin_top = 279.0
+margin_right = 596.0
+margin_bottom = 303.0
+text = "Ref"
+
+[node name="WindowDialog" type="WindowDialog" parent="."]
+margin_left = 208.0
+margin_top = -71.0
+margin_right = 435.0
+margin_bottom = -16.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="WindowDialog"]
+margin_left = 38.0
+margin_top = 12.0
+margin_right = 216.0
+margin_bottom = 41.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="WindowDialog"]
+position = Vector2( 20.2679, 26.1102 )
+scale = Vector2( 0.528851, 0.528851 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.847059 )
+position = Vector2( 45.5833, 218.358 )
+scale = Vector2( 0.631167, 0.631167 )
+texture = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.737255 )
+position = Vector2( 46.0648, 258.158 )
+scale = Vector2( 0.635041, 0.635041 )
+texture = ExtResource( 5 )
+
+[node name="World_checkbutton" type="CheckButton" parent="."]
+margin_left = 211.714
+margin_top = 198.734
+margin_right = 287.714
+margin_bottom = 238.734
+disabled = true
+pressed = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Brain_checkbutton" type="CheckButton" parent="."]
+margin_left = 211.854
+margin_top = 237.575
+margin_right = 287.854
+margin_bottom = 277.575
+disabled = true
+pressed = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="World_label_manager" type="Label" parent="."]
+margin_left = 67.9242
+margin_top = 212.337
+margin_right = 216.924
+margin_bottom = 226.337
+text = "World is not created"
+
+[node name="Brain_label_manager" type="Label" parent="."]
+margin_left = 68.4242
+margin_top = 252.837
+margin_right = 217.424
+margin_bottom = 266.837
+text = "Brain is not created"
+
+[connection signal="pressed" from="Button_close" to="." method="_on_Button_close_pressed"]
+[connection signal="button_pressed" from="Tree" to="." method="_on_Tree_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]

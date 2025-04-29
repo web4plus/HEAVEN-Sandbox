@@ -1,0 +1,76 @@
+[gd_scene format=2]
+
+[node name="EYES_VIEW" type="Node2D"]
+__meta__ = {
+"_edit_vertical_guides_": [ 19.9674 ]
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -3.0
+margin_top = -2.0
+margin_right = 206.0
+margin_bottom = 22.0
+color = Color( 0.133333, 0.133333, 0.133333, 1 )
+
+[node name="L1" type="ColorRect" parent="."]
+margin_left = 80.0
+margin_right = 100.0
+margin_bottom = 20.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="L2" type="ColorRect" parent="."]
+margin_left = 60.0
+margin_right = 80.0
+margin_bottom = 20.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="L3" type="ColorRect" parent="."]
+margin_left = 40.0
+margin_right = 60.0
+margin_bottom = 20.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="L4" type="ColorRect" parent="."]
+margin_left = 20.0
+margin_right = 40.0
+margin_bottom = 20.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="L5" type="ColorRect" parent="."]
+margin_right = 20.0
+margin_bottom = 20.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="R5" type="ColorRect" parent="."]
+margin_left = 182.757
+margin_top = 0.132956
+margin_right = 202.757
+margin_bottom = 20.133
+color = Color( 0, 0, 0, 1 )
+
+[node name="R4" type="ColorRect" parent="."]
+margin_left = 162.991
+margin_top = 0.117344
+margin_right = 182.991
+margin_bottom = 20.1173
+color = Color( 0, 0, 0, 1 )
+
+[node name="R3" type="ColorRect" parent="."]
+margin_left = 143.0
+margin_right = 163.0
+margin_bottom = 20.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="R2" type="ColorRect" parent="."]
+margin_left = 123.065
+margin_top = -0.0573273
+margin_right = 143.065
+margin_bottom = 19.9427
+color = Color( 0, 0, 0, 1 )
+
+[node name="R1" type="ColorRect" parent="."]
+margin_left = 103.243
+margin_top = -0.192844
+margin_right = 123.243
+margin_bottom = 19.8072
+color = Color( 0, 0, 0, 1 )
