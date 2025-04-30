@@ -1,5 +1,6 @@
 <a name="top"></a>
 
+⚠️ IN DEVELOPEMENT, BETA ACCESS 
 
 <h3 align ="right">/ 🧠 Open-source Artificial Brain Model + IDE for aLife simulation |</h3>
 
@@ -38,8 +39,7 @@
 * <b> aCNS MODELS</b>
   * ADAM:S1E1
 * <b> LICENSE </b>
-  * [ CCNC 4.0 ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#-license)
-  * [ Commercial use ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#-license)
+  * [ GPL3 ]
 * <b> HOW TO INSTALL </b>
   * Windows
   * Linux
