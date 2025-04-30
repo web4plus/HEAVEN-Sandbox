@@ -46,35 +46,7 @@
 
 ## [ 👾 About the project ]
 
- *  Founded over a decade ago as an experimental research, Heaven's team general purpose has become to develop an open-source and scalable artificial life model within the cyberspace, providing researchers and enthusiasts access to specialized software and a knowledge base for aCNS lifeforms development from scratch.
- *  We want to improve our technology, build a strong community of developers and enthusiats, and make hight quality infrastructure around the project, so it could develop as soon as possible. 
-
-## [ 🌐 WEB3. What's next? ]
-
- As part of the Open Cyberspace, we aspire to be pioneers in the development of Internet 4.0, a vision that is becoming real thankfully to the latest advancements in WEB3, AI and GameDev.
-
-## [ ✏️ Our roadmap ]
-
-* [ stage 1 : research ] | 2014
-    * Biological brain reverse-engineering
-    * aCNS model developing
-    * Neuroconstruction platform
-* [ stage 2: community ] | 2024
-    * NFT: Artificial brain primary launch
-    * Project website & GitHub
-    * AV token deploy
-    * STON.fi DeFi pool launch
-    * Socials & Marketing
-* [ stage 3: sandbox ] | 2025
-    * ACNS tutorial video course series | Ep. 1 >>
-    * .///HEAVEN: Sandbox release
-    * Open Cyberspace | WEB4 Browser
-    * WEB4+ Marketplace
-    ...
-* [ stage 4: Expansion ] 🚩
-    ... stay tuned for more!
-
-
+ *  Test
 
 
 
