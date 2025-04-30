@@ -49,3 +49,9 @@
 
  *  Test
 
+## [ Frequently asked questions ]
+
+ >>  REFERENCES
+	This software and its components is based on the research that was described in 
+	"[ UPGRADE ] - How to build an Artificial Brain with a hybrid of the spiking neurons (1 edition)"
+	at https://github.com/web4plus/HEAVEN_Library/tree/main/EN
