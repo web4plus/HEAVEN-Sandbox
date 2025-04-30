@@ -27,7 +27,7 @@
 * <b> INTRODUCTION </b>
   * [ About the project ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
 
-* <b> ARTIFICIAL NEURONS</b>
+* <b> ARTIFICIAL NEURONS KIT</b>
   * SENSOR_adr+ v1.0.0
   * ...
 
@@ -41,8 +41,11 @@
   * Linux
 
 
+* <b> FREQUENTLY ASKED </b>
+  * References
+  * Contact
 
-## [ 👾 About the project ]
+## [ About the project ]
 
  *  Test
 
