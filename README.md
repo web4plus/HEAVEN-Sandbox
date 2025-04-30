@@ -1,8 +1,6 @@
 <a name="top"></a>
 
-⚠️ IN DEVELOPEMENT, BETA ACCESS 
-
-<h3 align ="right">/ 🧠 Open-source Artificial Brain Model + IDE for aLife simulation |</h3>
+<h3 align ="right">/ 🧠 Open-source Artificial Brain Model + IDE for aLife simulation | ⚠️ EARLY ACCESS</h3>
 
 <h1 align="center" >
   <a href="#">
