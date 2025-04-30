@@ -15,7 +15,7 @@
 >
 > Since neuromorphic aCNS systems is a new and under-studied technology that relies on mechanics and architecture inspired by processes of biological brain, it is recommended that research be conducted with caution, especially when autonomous, motivated or sentient construction being produced. 
 >
-> ℹ️ WEB3 Products that include NFT collection and AV Token (not revoked!) should be consider as form of donation at the moment.
+> ℹ️ NFT collection and AV Token (not revoked!) should be consider as form of donation at the moment.
 >
 
 <h1 align="center" >
@@ -47,9 +47,4 @@
 ## [ 👾 About the project ]
 
  *  Test
-
-
-
-## Acknowledgments
-
 
