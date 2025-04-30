@@ -26,18 +26,21 @@
 
 * <b> INTRODUCTION </b>
   * [ About the project ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
+
 * <b> ARTIFICIAL NEURONS</b>
   * SENSOR_adr+ v1.0.0
   * ...
+
 * <b> aCNS EXAMPLE MODELS</b>
   * ADAM:EN1
   * ADAM:EN1-2
   * ADAM:S1E1-ERR-FM
-* <b> LICENSE </b>
-  * [ GPL3 ]
+
 * <b> HOW TO INSTALL </b>
   * Windows
   * Linux
+
+
 
 ## [ 👾 About the project ]
 
