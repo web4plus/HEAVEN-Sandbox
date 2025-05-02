@@ -32,9 +32,13 @@
 
 * <b> ARTIFICIAL NEURONS STANDART KIT</b>
   * [ SENSOR_adr+ ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
-  * [ NEURON [ + ] ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
-  * [ NEURON [ - ] ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
-
+  * [ INHIBITORY ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
+  * [ EXHIBITORY ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
+  * [ OUTPUT [ - ] ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
+  * [ NSA [ - ] ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
+  * [ NGMC [ - ] ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
+  * [ AMOTO [ - ] ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
+  * [ CGN++ [ - ] ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
 
 * <b> aCNS EXAMPLE MODELS</b>
   * [ ADAM:EN1 ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
