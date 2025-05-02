@@ -79,7 +79,9 @@ Using the features developed in software, users can freely build, analyze and ex
 
 
 ## [ aCNS Example Models ]
-  * This software is destributed as open-source Godot 3.5.1 Project
+<h4>» ADAM:EN1</h4>
+<h4>» ADAM:EN1-2</h4>
+<h4>» ADAM:S1E1-ERR-FM</h4>
 
 
 ## [ How To Install ]
