@@ -6,7 +6,10 @@
   <a href="#">
     <img src="https://raw.githubusercontent.com/web4plus/web4plus.github.io/refs/heads/main/titleweb4plus.png" alt="Artificial Brain">
   </a>
+  
 </h1>
+
+
 
 >
 > ⚠️ <a name="warning">Experimental software, use at your own risk!</a>
@@ -16,11 +19,13 @@
 > ℹ️ NFT collection and AV Token (not revoked!) is better to consider as form of donation, at the moment.
 >
 
-<h1 align="center" >
-  <a href="#">
-    <img src="https://github.com/web4plus/web4plus.github.io/blob/main/sandbox_preview.jpg" alt=".///HEAVEN:Artificial Brain">
-  </a>
-</h1>
+
+[![Watch the DEMO video](https://github.com/web4plus/web4plus.github.io/blob/main/banner5.png?raw=true)](https://www.youtube.com/watch?v=PMuuzlIanJ4)
+
+
+
+
+
 
 ## [ 🧭 Navigation >> ]
 
@@ -47,11 +52,15 @@
 
 ## [ About the project ]
 
- *  Test
+<h1 align="center" >
+  <a href="#">
+    <img src="https://github.com/web4plus/web4plus.github.io/blob/main/sandbox_preview.png?raw=true" alt=".///HEAVEN:Artificial Brain">
+  </a>
+</h1>
 
 ## [ Frequently asked questions ]
-
- >>  REFERENCES
-	This software and its components is based on the research that was described in 
+ * REFERENCES
+ >>  
+	This software and its components is based on the research that was described in /n
 	"[ UPGRADE ] - How to build an Artificial Brain with a hybrid of the spiking neurons (1 edition)"
 	at https://github.com/web4plus/HEAVEN_Library/tree/main/EN
