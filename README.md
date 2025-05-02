@@ -84,6 +84,7 @@ Using the features developed in software, users can freely build, analyze and ex
 
 ## [ How To Install ]
   * This software is destributed as open-source Godot 3.5.1 Project
+    * https://github.com/godotengine/godot/releases/tag/3.5.1-stable
 
 ## [ Frequently Asked Questions ]
  * REFERENCES
