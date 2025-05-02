@@ -19,9 +19,11 @@
 > ℹ️ NFT collection and AV Token (not revoked!) is better to consider as form of donation, at the moment.
 >
 
+<h1 align="center" >
 
 [![Watch the DEMO video](https://github.com/web4plus/web4plus.github.io/blob/main/banner5.png?raw=true)](https://www.youtube.com/watch?v=PMuuzlIanJ4)
 
+</h1>
 
 
 
