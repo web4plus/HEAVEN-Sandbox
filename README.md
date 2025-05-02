@@ -12,9 +12,8 @@
 
 
 >
-> ⚠️ <a name="warning">Experimental software, use at your own risk!</a>
+> ⚠️ <a name="warning">Experimental technology, use at your own risk!</a>
 >
-> Since neuromorphic aCNS is a new and under-studied approach in AI that relies on mechanics and architecture inspired by processes of biological brain, it is recommended that research be conducted with caution, especially when autonomous and motivated constructions being produced. 
 >
 > ℹ️ NFT collection and AV Token (not revoked!) is better to consider as form of donation, at the moment.
 >
@@ -44,8 +43,9 @@
   * ADAM:S1E1-ERR-FM
 
 * <b> HOW TO INSTALL </b>
-  * Windows
-  * Linux
+  * This software is destributed as open-source Godot 3.5.1 Project
+  
+
 
 
 * <b> FREQUENTLY ASKED </b>
@@ -54,11 +54,22 @@
 
 ## [ About the project ]
 
+<h4>» Quick overview of the .///HEAVEN:Sandbox</h4>
+
 <h1 align="center" >
   <a href="#">
     <img src="https://github.com/web4plus/web4plus.github.io/blob/main/sandbox_preview.png?raw=true" alt=".///HEAVEN:Artificial Brain">
   </a>
 </h1>
+
+In total, in this version of the program (v.1.0.0), the following functionality is implemented:
+
+        ◦ Interface for constructing of the nerve circuits;
+        ◦ Simulation of the external cyberspatial environment; 
+        ◦ BRIDGES: BODY < - > BRAIN Protocol
+        ◦ Primary tools for the project management and analysis; 
+ 
+Using the features developed in software, users can freely build, analyze and experiment with neuromorphic systems, easily connecting them to a prepared bodies within cyberspatial environments, through the BRIDGES protocol.
 
 ## [ Frequently asked questions ]
  * REFERENCES
