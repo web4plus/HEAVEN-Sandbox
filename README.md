@@ -31,26 +31,23 @@
   * [ About the project ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
 
 * <b> ARTIFICIAL NEURONS STANDART KIT</b>
-  * SENSOR_adr+ v1.0.0
-  * NEURON [+] v1.0.0
-  * NEURON [-] v1.0.0
+  * [ SENSOR_adr+ ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
+  * [ NEURON [ + ] ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
+  * [ NEURON [ - ] ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
 
 
 * <b> aCNS EXAMPLE MODELS</b>
-  * ADAM:EN1
-  * ADAM:EN1-2
-  * ADAM:S1E1-ERR-FM
+  * [ ADAM:EN1 ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
+  * [ ADAM:EN1-2 ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
+  * [ ADAM:S1E1-ERR-FM ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
 
 * <b> HOW TO INSTALL </b>
-  * Windows / Linux
+  * [ Windows / Linux ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
   
-
-
-
 * <b> FREQUENTLY ASKED </b>
-  * References
-  * Contact
-  * Donate & Products
+  * [ References ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
+  * [ Contact ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
+  * [ Donate & Products ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
 
 ## [ About the project ]
 
@@ -71,10 +68,24 @@ In total, in this version of the program (v.1.0.0), the following functionality 
  
 Using the features developed in software, users can freely build, analyze and experiment with neuromorphic systems, easily connecting them to a prepared bodies within cyberspatial environments, through the BRIDGES protocol.
 
-## [ How to install ]
+
+
+## [ Artificial Neurons Standart Kit ]
+<h4>» SENSOR_adr+ v1.0.0</h4>
+<h4>» NEURON [ + ] v1.0.0</h4>
+<h4>» NEURON [ - ] v1.0.0</h4>
+
+
+
+
+## [ aCNS Example Models ]
   * This software is destributed as open-source Godot 3.5.1 Project
-  
-## [ Frequently asked questions ]
+
+
+## [ How To Install ]
+  * This software is destributed as open-source Godot 3.5.1 Project
+
+## [ Frequently Asked Questions ]
  * REFERENCES
  >>  
 	This software and its components is based on the research that was described in
