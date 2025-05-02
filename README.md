@@ -21,7 +21,7 @@
 
 <h1 align="center" >
 
-[![Watch the DEMO video](https://github.com/web4plus/web4plus.github.io/blob/main/banner5.png?raw=true)](https://www.youtube.com/watch?v=PMuuzlIanJ4)
+<img width=100% src="https://github.com/web4plus/web4plus.github.io/blob/main/banner5.png?raw=true" >
 
 </h1>
 
