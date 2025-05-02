@@ -20,9 +20,9 @@
 >
 
 <h1 align="center" >
-
+<a href="https://www.youtube.com/watch?v=PMuuzlIanJ4" target="_blank">
 <img width=100% src="https://github.com/web4plus/web4plus.github.io/blob/main/banner5.png?raw=true" >
-
+</a>
 </h1>
 
 
@@ -55,7 +55,7 @@
 ## [ About the project ]
 
 <h1 align="center" >
-  <a href="https://www.youtube.com/watch?v=PMuuzlIanJ4">
+  <a href="#">
     <img src="https://github.com/web4plus/web4plus.github.io/blob/main/sandbox_preview.png?raw=true" alt=".///HEAVEN:Artificial Brain">
   </a>
 </h1>
