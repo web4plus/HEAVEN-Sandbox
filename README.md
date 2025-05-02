@@ -1,6 +1,3 @@
-<a name="top"></a>
-
-<h3 align ="right">/ 🧠 Open-source Artificial Brain Model + IDE for aLife simulation | ⚠️ EARLY ACCESS</h3>
 
 <h1 align="center" >
   <a href="#">
