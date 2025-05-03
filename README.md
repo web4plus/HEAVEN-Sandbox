@@ -42,9 +42,6 @@
 
 * <b> aCNS EXAMPLE MODELS</b>
   * [ ADAM:EN1 ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
-
-
-
   * [ ADAM:EN1-2 ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
   * [ ADAM:S1E1-ERR-FM ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
 
@@ -78,9 +75,15 @@ Using the features developed in software, users can freely build, analyze and ex
 
 
 ## [ Artificial Neurons Standart Kit ]
-<h4>» SENSOR_adr+ v1.0.0</h4>
-<h4>» NEURON [ + ] v1.0.0</h4>
-<h4>» NEURON [ - ] v1.0.0</h4>
+
+<h4>SENSOR_adr+</h4>
+<h4>INHIBITORY</h4>
+<h4>EXHIBITORY</h4>
+<h4>OUTPUT</h4>
+<h4>NSA</h4>
+<h4>NGMC</h4>
+<h4>AMOTO</h4>
+<h4>CGN++</h4>
 
 
 
@@ -104,3 +107,8 @@ Using the features developed in software, users can freely build, analyze and ex
 	This software and its components is based on the research that was described in
 	"[ UPGRADE ] - How to build an Artificial Brain with a hybrid of the spiking neurons (1 edition)"
 	at https://github.com/web4plus/HEAVEN_Library/tree/main/EN
+
+ * Contact
+ >> [  UNAVAILABLE ]
+ * Products & Donate
+ <img width=100% src="https://github.com/web4plus/web4plus.github.io/blob/main/banner.png?raw=true" >
