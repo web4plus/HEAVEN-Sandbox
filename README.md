@@ -14,7 +14,7 @@
 >
 > ℹ️ NFT collection and AV Token (not revoked!) is better to consider as form of donation, at the moment.
 >
-
+> 📖 Free E-book is availbale here: https://github.com/web4plus/HEAVEN_Library/tree/main/EN
 <h1 align="center" >
 <a href="https://www.youtube.com/watch?v=PMuuzlIanJ4" target="_blank">
 <img width=100% src="https://github.com/web4plus/web4plus.github.io/blob/main/banner5.png?raw=true" >
