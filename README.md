@@ -111,16 +111,19 @@ Using the features developed in software, users can freely build, analyze and ex
     * https://github.com/godotengine/godot/releases/tag/3.5.1-stable
 
 ## [ Frequently Asked Questions ]
- * References
- >>  
+ <h3> References  </h3>
+ 
+ >>
 	This software and its components is based on the research that was described in
 	"[ UPGRADE ] - How to build an Artificial Brain with a hybrid of the spiking neurons (1 edition)"
 	at https://github.com/web4plus/HEAVEN_Library/tree/main/EN
 
- * Community
-      * YT: WEB4plus
-      * Discord: -
- * Products & Donate
+ <h3> Community </h3>
+
+* YT: WEB4plus
+* Discord: -
+
+<h3> Products & Donate </h3>
 
 <a href="https://getgems.io/heaven" target="_blank">
 <img width=100% src="https://github.com/web4plus/web4plus.github.io/blob/main/banner.png?raw=true" >
