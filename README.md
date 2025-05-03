@@ -55,6 +55,7 @@
 
 ## [ About the project ]
 
+<img width=100% src="https://github.com/web4plus/HEAVEN_Library/blob/main/EN/IMAGES_FULL/aCNS_AGENT.png?raw=true" >
 <h4>» Quick overview of the .///HEAVEN:Sandbox</h4>
 
 <h1 align="center" >
@@ -90,7 +91,6 @@ Using the features developed in software, users can freely build, analyze and ex
 
 ## [ aCNS Example Models ]
 
-<img width=100% src="https://github.com/web4plus/HEAVEN_Library/blob/main/EN/IMAGES_FULL/aCNS_AGENT.png?raw=true" >
 <h4>» ADAM:EN1</h4>
 <img width=100% src="https://github.com/web4plus/HEAVEN_Library/blob/main/EN/IMAGES_FULL/ADAM-EN1.png?raw=true" >
 <h4>» ADAM:EN1-2</h4>
