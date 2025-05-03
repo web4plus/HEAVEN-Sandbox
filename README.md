@@ -84,14 +84,14 @@ Using the features developed in software, users can freely build, analyze and ex
 
 ## [ Artificial Neurons Standart Kit ]
 
-<h4>SENSOR_adr+</h4>
-<h4>INHIBITORY</h4>
-<h4>EXHIBITORY</h4>
-<h4>OUTPUT</h4>
-<h4>NSA</h4>
-<h4>NGMC</h4>
-<h4>AMOTO</h4>
-<h4>CGN++</h4>
+<h4>» SENSOR_adr+</h4>
+<h4>» INHIBITORY</h4>
+<h4>» EXHIBITORY</h4>
+<h4>» OUTPUT</h4>
+<h4>» NSA</h4>
+<h4>» NGMC</h4>
+<h4>» AMOTO</h4>
+<h4>» CGN++</h4>
 
 
 
@@ -112,7 +112,7 @@ Using the features developed in software, users can freely build, analyze and ex
 
 ## [ Frequently Asked Questions ]
  <h3> References  </h3>
- 
+
  >>
 	This software and its components is based on the research that was described in
 	"[ UPGRADE ] - How to build an Artificial Brain with a hybrid of the spiking neurons (1 edition)"
