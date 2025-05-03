@@ -55,8 +55,15 @@
 
 ## [ About the project ]
 
-<img width=100% src="https://github.com/web4plus/HEAVEN_Library/blob/main/EN/IMAGES_FULL/aCNS_AGENT.png?raw=true" >
-<h4>» Quick overview of the .///HEAVEN:Sandbox</h4>
+
+
+
+
+.///HEAVEN: Artificial Brain - is an open-source experimental enviroment, designed for developing of aCNS projects.
+
+
+
+<h3>» Quick overview </h3>
 
 <h1 align="center" >
   <a href="#">
