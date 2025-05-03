@@ -89,6 +89,8 @@ Using the features developed in software, users can freely build, analyze and ex
 
 
 ## [ aCNS Example Models ]
+
+<img width=100% src="https://github.com/web4plus/HEAVEN_Library/blob/main/EN/IMAGES_FULL/aCNS_AGENT.png?raw=true" >
 <h4>» ADAM:EN1</h4>
 <img width=100% src="https://github.com/web4plus/HEAVEN_Library/blob/main/EN/IMAGES_FULL/ADAM-EN1.png?raw=true" >
 <h4>» ADAM:EN1-2</h4>
@@ -108,8 +110,9 @@ Using the features developed in software, users can freely build, analyze and ex
 	"[ UPGRADE ] - How to build an Artificial Brain with a hybrid of the spiking neurons (1 edition)"
 	at https://github.com/web4plus/HEAVEN_Library/tree/main/EN
 
- * Contact
- >> [  UNAVAILABLE ]
+ * Community
+      * YT: WEB4plus
+      * Discord: -
  * Products & Donate
 
 <a href="https://getgems.io/heaven" target="_blank">
