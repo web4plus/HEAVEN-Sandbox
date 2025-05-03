@@ -50,7 +50,7 @@
   
 * <b> FREQUENTLY ASKED </b>
   * [ References ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
-  * [ Contact ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
+  * [ Community ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
   * [ Products & Donate ](https://github.com/web4plus/HEAVEN-Sandbox/blob/en-lang/README.md#--about-the-project-heaven)
 
 ## [ About the project ]
@@ -59,7 +59,7 @@
 
 
 
-.///HEAVEN: Artificial Brain - is an open-source experimental enviroment, designed for developing of aCNS projects.
+.///HEAVEN: Sandbox - is an open-source experimental enviroment, designed for developing of neuromorphic constructions.
 
 
 
