@@ -59,7 +59,7 @@
 
 
 
-.///HEAVEN: Sandbox - is an open-source experimental enviroment, designed for developing of neuromorphic constructions.
+.///HEAVEN: Sandbox - is an open-source enviroment, designed for developing of neuromorphic constructions.
 
 
 
