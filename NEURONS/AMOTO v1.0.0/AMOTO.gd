@@ -1,6 +1,5 @@
 extends GraphNode
 
-
 var Indicator = 0.0
 var potential: float = 0.0
 var sum_potential: float = 0.0
@@ -24,7 +23,7 @@ func _physics_process(_delta):
 	if sum_potential != potential:
 		sum_potential = potential
 		$Label.text = str(sum_potential)
-		#print('AMOTO >> MAKE ', INPUT_COMBO)
+
 		MAKE(INPUT_COMBO)                                                       
 		$ColorRect.color = Color(255,0,0)
 		Indicator = 1.0
@@ -47,18 +46,14 @@ func _on_GraphNode_gui_input(event):
 		MAKE([-1000,-50])
 
 func MAKE(combo):
-	# Добавить проверку существования мира иначе вылетает 
-	#print('AMOTO: INPUT COMBO')
-	#print(combo)
-	#print(name)
-	#print(title)
+	# Add WORLD check, otherwise error ??
 
-	# Тут будет проприоцепторный каскад
+	# Proprio cascade will be here
 	print('Непосредственное выполнение с комбо', combo)
 	var result = get_node('/root/MAIN/WORLD/CHARACTER/BODY').EXECUTE(title, combo)      # FUNCTION(title)
 	print('result: ', result)
 	
-	# Сброс пртенциала
+	# Polarization reset
 	potential = 0.0
 	sum_potential = 0.0
 

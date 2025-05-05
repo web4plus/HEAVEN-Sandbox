@@ -53,22 +53,6 @@ func _ready():
 	$PopupMenu.add_item("VALUES")
 	$PopupMenu.add_item("DATA")
 
-	
-	
-	# Если запись о связях уже прису
-	#if "CONNECTIONS" in GraphData:
-	#	Connections = GraphData["CONNECTIONS"]
-	#else:
-	#	GraphData["CONNECTIONS"] = Connections
-		
-		
-	#print(GraphData)
-
-
-
-
-
-
 
 
 # ФУНКЦИЯ СОПРЯЖЕНИЯ С ПОЛЕМ ДАННЫХ
@@ -109,7 +93,6 @@ func CONNECT_DATA():
 		# Создать раздел с подключениями для данной ноды в ее ячейке 
 		
 		GraphData[name]["Connections"] = {0:{}}
-		#GraphData[name]["Connections"] = {}
 		# Создать раздел со значением SpinBox (сила импульса) и определить текущую
 		GraphData[name]["Params"] = {}
 		GraphData[name]["Params"]["SpinBox_val"] = $SpinBox.value
@@ -123,15 +106,8 @@ func CONNECT_DATA():
 	# определить NodeData как ссылку на ячейку в поле ??? нужно ли
 	NodeData = GraphData[name] 
 	$SpinBox.set_value(float(GraphData[name]["Params"]["SpinBox_val"]))
-	# Определить Connections как ссылку на соотв. раздел ячейки  в поле ??? нужно ли 
-	#Connections = NodeData["Connections"]
-	#NodeData["Connections"] = Connections 
-	# Определить SpinBox_val как ссылку на соотв раздел в ячейке
-	
 	print(NodeData)
-	#get_tree().quit()
-	
-	#NodeData["Params"]["SpinBox_val"] = SpinBox_val 
+
 	# / БЛОК ИНТЕГРАЦИИ С ПОЛЕМ ИНФОРМАЦИИ
 	
 	
@@ -232,95 +208,10 @@ func SEND_IMPULSE(IMP, DATA):
 			print(get_parent().GraphData[name]["Redirection"])
 			# Тут нужно?? отключить ноду правильно 
 
-			# Тут нужно удалить запись о соседе из поля информации
-			#get_parent().GraphData[name]["Connections"].erase(NEIGH)
-			#print('ЗАПИСЬ УДАЛЕНА!')
-		
+			# Тут нужно удалить запись о соседе из поля информаци
 		
 	else:
 		print("ПОлучатель равен NULL, импульс не совершается")
-
-"""
-	# Если кол-во связей нейрона больше нуля
-	if NodeData["Connections"].size() > 0:
-		print('Список связей')
-		print(NodeData["Connections"])
-		# Пройти по каждому соседу в списке связей
-		for NEIGH in NodeData["Connections"]: 
-			print("Текущий сосед сенсора: ", NEIGH, " ", NodeData["Connections"][NEIGH])
-			# Тут нужно сразу посчитать potentian*W(neigh)
-			#X = Y * Connections[NEIGH]
-			#print('Выход по данной связи')
-			#print(current_potential)
-			#print(Connections[NEIGH])
-			#print(X)
-			# Активировать функцию 
-			#get_node('/root/MAIN/GraphEdit/'+NEIGH).potential += IMP
-			
-			if $SpinBox.editable == true:
-				IMP = float($SpinBox.get_line_edit().text)
-			
-			# Убедится в существовании ноды
-			var receiver_node = get_parent().get_node_or_null(NEIGH)
-			# Если нода существует
-			if receiver_node != null:
-				print('СОСЕД ОБНАРУЖЕН!')
-				receiver_node.SUMM(IMP)        #.SUMM(IMP)  #Отсюда я убрал адрес
-				$ColorRect.color = Color(0,255,0)
-				Indicator = 1.0
-			# Если нода не существует
-			elif receiver_node == null:
-				print('СОСЕД НЕ ОБНАРУЖЕН')
-				# Тут нужно удалить запись о соседе из поля информации
-				get_parent().GraphData[name]["Connections"].erase(NEIGH)
-				print('ЗАПИСЬ УДАЛЕНА!')
-				
-			#Recatangle_light = 0
-			#$ColorRect.color = Color(Recatangle_light)
-			#potential -= current_potential
-
-	print('---')
-
-
-
-
-# Функция возбуждения. Активируется когда на нейрон совершается какое-либо воздействие 
-#func SUMM(voltage): # Суммирование?
-#		print("SUMM!")
-#		potential += voltage # Увеличить текущий заряд нейрона
-#		Recatangle_light = -100 # Изменить (погасить) значение индикатора 
-#		$ColorRect.color = Color(Recatangle_light) # Изменить индикатор
-#		$Label3.text = "C: "+str(potential) # Изменить тексовый индикатор
-		
-
-func SIGNAL(input):
-	#Recatangle_light = 255
-	#$ColorRect.color = Color(Recatangle_light)
-	print("Input", input)
-	#Y = 1 / (1 - pow(2.71828,-input)) # Сигмоидальная функция
-	#print("Y:", Y)
-	# Если кол-во связей нейрона больше нуля
-	if Connection !=  "":
-		print('Список связей')
-		print(Connection)
-		# Пройти по каждому соседу в списке связей
-		##for NEIGH in Connections: 
-		print("Cосед: ", Connection, " ", Connections[NEIGH])
-			# Тут нужно сразу посчитать potentian*W(neigh)
-			#X = Y * Connections[NEIGH]
-			#print('Выход по данной связи')
-			#print(current_potential)
-			#print(Connections[NEIGH])
-			#print(X)
-			# Активировать функцию 
-			get_node('/root/MAIN/GraphEdit/'+Connection).SIGMOID(input)
-			#Recatangle_light = 0
-			#$ColorRect.color = Color(Recatangle_light)
-			#potential -= current_potential
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-"""
 
 
 
@@ -350,6 +241,47 @@ func _physics_process(_delta):
 
 
 
+
+
+
+# NEURON UI FUNCTIONS ##########################################################
+
+func _on_SpinBox_value_changed(value):
+	print('ValChanged')
+	GraphData[name]["Params"]["SpinBox_val"] = $SpinBox.value
+
+
+#Re-ordering of child neurons
+func ORDER():
+
+		# Тут нужно вычислить общую длину всех дочерних нод
+		var summ_lenght = 0 
+		for NEIGH in GraphData[name]["Connections"][0]:
+			print(get_parent().get_node(NEIGH).rect_size.y)
+			summ_lenght += int(get_parent().get_node(NEIGH).rect_size.y)
+
+		#print("Common height of child neurols is equal to" )
+		#print(summ_lenght)
+
+		#print current position of the parent node
+		#print("Position of the parental neuron:" + str(offset))
+		
+		#print("Center of the parental neuron:")
+		var root_node_center =  int(rect_size.y)/2
+		
+		# Формула расчета стартовой точки для позиционирования
+		var pos_starting_point = ( int(offset.y) + root_node_center ) - (summ_lenght / 2)
+		print(" стартовая точка позиционирования")
+		print(pos_starting_point)
+		
+		# Собственно позиционирование
+		for NEIGH in GraphData[name]["Connections"][0]:
+			get_parent().get_node(NEIGH).offset.y = pos_starting_point
+			get_parent().get_node(NEIGH).offset.x = offset.x + 175
+			# Увеличить значениеточки позиционирования на длину текущей ноды
+			pos_starting_point += get_parent().get_node(NEIGH).rect_size.y
+
+
 func _on_PopupMenu_id_pressed(id):
 	var item_name = $PopupMenu.get_item_text(id)
 	print(item_name)
@@ -377,88 +309,3 @@ func _on_PopupMenu_id_pressed(id):
 
 	if item_name == 'ORDER':
 		ORDER()
-"""
-		print("Позиционирование")
-
-		
-		# Тут нужно вычислить общую длину всех дочерних нод
-		var summ_lenght = 0 
-		for NEIGH in GraphData[name]["Connections"]:
-			#print(get_parent().get_node(NEIGH).rect_size.x)
-			print(get_parent().get_node(NEIGH).rect_size.y)
-			summ_lenght += int(get_parent().get_node(NEIGH).rect_size.y)
-
-		print("Общая длина нод составляет:" )
-		print(summ_lenght)
-
-		# Это текущая позиция родительской ноды
-		print("Позиция родительской ноды:" + str(offset))
-		
-		print("Центр родительской ноды:")
-		var root_node_center =  int(rect_size.y)/2
-		
-		# Формула расчета стартовой точки для позиционирования
-		var pos_starting_point = ( int(offset.y) + root_node_center ) - (summ_lenght / 2)
-		print(" стартовая точка позиционирования")
-		print(pos_starting_point)
-		
-		
-		# Собственно позиционирование
-		for NEIGH in GraphData[name]["Connections"]:
-			get_parent().get_node(NEIGH).offset.y = pos_starting_point
-			get_parent().get_node(NEIGH).offset.x = offset.x + 175
-			# Увеличить значениеточки позиционирования на длину текущей ноды
-			pos_starting_point += get_parent().get_node(NEIGH).rect_size.y
-"""
-func _on_SpinBox_value_changed(value):
-	print('ValChanged')
-	#print(GraphData[name]["Params"]["SpinBox_val"])
-	#print(SpinBox_val)
-	
-	
-	GraphData[name]["Params"]["SpinBox_val"] = $SpinBox.value
-	#SpinBox_val = $SpinBox.value
-	
-	#print($SpinBox.value)
-	#print(GraphData[name]["Params"]["SpinBox_val"])
-	#print()
-
-	#pass # Replace with function body.
-
-
-
-
-func ORDER():
-		print("Позиционирование")
-
-		
-		# Тут нужно вычислить общую длину всех дочерних нод
-		var summ_lenght = 0 
-		for NEIGH in GraphData[name]["Connections"][0]:
-			#print(get_parent().get_node(NEIGH).rect_size.x)
-			print(get_parent().get_node(NEIGH).rect_size.y)
-			summ_lenght += int(get_parent().get_node(NEIGH).rect_size.y)
-
-		print("Общая длина нод составляет:" )
-		print(summ_lenght)
-
-		# Это текущая позиция родительской ноды
-		print("Позиция родительской ноды:" + str(offset))
-		
-		print("Центр родительской ноды:")
-		var root_node_center =  int(rect_size.y)/2
-		
-		# Формула расчета стартовой точки для позиционирования
-		var pos_starting_point = ( int(offset.y) + root_node_center ) - (summ_lenght / 2)
-		print(" стартовая точка позиционирования")
-		print(pos_starting_point)
-		
-		
-		# Собственно позиционирование
-		for NEIGH in GraphData[name]["Connections"][0]:
-			get_parent().get_node(NEIGH).offset.y = pos_starting_point
-			get_parent().get_node(NEIGH).offset.x = offset.x + 175
-			# Увеличить значениеточки позиционирования на длину текущей ноды
-			pos_starting_point += get_parent().get_node(NEIGH).rect_size.y
-
-
