@@ -1,0 +1,7 @@
+UI
+	Tools
+		Round menu around cursour 
+
+Neurons
+	Interneurons
+		> Unify interneurons into a new one, switchable (types). 

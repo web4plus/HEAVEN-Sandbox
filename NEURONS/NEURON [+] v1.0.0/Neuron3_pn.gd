@@ -289,73 +289,13 @@ func _physics_process(_delta):
 
 
 	# Обновление current potential statement text indicator 
-	#$Label3.text = "P: "+str(NodeData["Params"]["Potential"])
 	$CURRENT.text = "P: "+str(NodeData["Params"]["Potential"])
 	$ACTIVATION_LVL.text = "AL: "+str(NodeData["Params"]["Activation_level"])
 
 
-
-"""
-
-	# Если текущий потенциал больше или равен порогу активации
-	if potential > activation_level:
-		#Recatangle_light = 255
-		#$ColorRect.color = Color(Recatangle_light,Recatangle_light,Recatangle_light)
-		
-		#current_potential = potential
-		# Следует назначить новый порог активации (заменить на текущий потенциал)
-
-
-
-		# ВОЗБУЖДАЮЩИЙ КАНАЛ
-		if Connections_inhibition.size() > 0:
-			print('Список связей')
-			print(Connections_inhibition)
-			# Пройти по каждому соседу в списке связей
-			for NEIGH in Connections_inhibition: 
-				Recatangle_light = 200
-				$ColorRect.color = Color(Recatangle_light,Recatangle_light,Recatangle_light)
-				#get_node('/root/MAIN/GraphEdit/'+NEIGH).potential += 1.0
-				get_parent().get_node(NEIGH).SUMM(activation_level)
-				Connections_inhibition[NEIGH] = int(Connections_inhibition[NEIGH]) + 1
-				print('Увеличен вес, новый вес для '+ NEIGH + " : "+ str(Connections_inhibition[NEIGH]))
-				#get_node('/root/MAIN/GraphEdit/'+NEIGH).Recatangle_light = -
-				#Recatangle_light = 0
-				#$ColorRect.color = Color(Recatangle_light,Recatangle_light,Recatangle_light)
-
-			
-				
-		# ПОГАШАЮЩИЙ КАНАЛ
-		if Connections_exhibition.size() > 0:
-			print('Список связей')
-			print(Connections_exhibition)
-			# Пройти по каждому соседу в списке связей
-			for NEIGH in Connections_exhibition: 
-				Recatangle_light = 200
-				$ColorRect.color = Color(Recatangle_light,Recatangle_light,Recatangle_light)
-				#get_node('/root/MAIN/GraphEdit/'+NEIGH).potential += 1.0
-				get_parent().get_node(NEIGH).DECR(activation_level)
-				Connections_exhibition[NEIGH] = int(Connections_exhibition[NEIGH]) - 1 # ЭТО ВЕС В СПИСКЕ ВЯЗЕЙ
-				print('Уменьшен вес, новый вес для '+ NEIGH + " : "+ str(Connections_exhibition[NEIGH]))
-				#get_node('/root/MAIN/GraphEdit/'+NEIGH).Recatangle_light = -
-				#Recatangle_light = 0
-				#$ColorRect.color = Color(Recatangle_light,Recatangle_light,Recatangle_light)
-				
-		potential -= activation_level # Тут отнимаю от текущего потенциала только что отправленный сигнал
-		activation_level += 0.00001 # Тут я медленно повышаю порог после каждого спайка, тут я заменил плавное возрастание activation_level = potential
-		print('Новый порог ', activation_level)
-"""
-
-
-
-
-
 func _on_PopupMenu_id_pressed(id):
 	var item_name = $PopupMenu.get_item_text(id)
-	#220225###########print(item_name)
 	if item_name == popup_monitor:
-		#220225###########print("CONNECTING")
-		#get_node("/root/MAIN/Panel/SPERCTRUM/Label2").text = str(name)+" CONNECTED"
 		get_node("/root/MAIN/Panel/SPERCTRUM").connected_neuron = neuron_full_path
 
 	if item_name == 'DATA':
